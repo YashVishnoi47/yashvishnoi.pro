@@ -3,21 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --line-color: hsl(0, 0%, 80%);
+  --max-width: 800px;
+  --primary-text-color: hsl(0, 0%, 5%);
+  --sec-text-color: hsl(0, 0%,40%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-line: var(--line-color);
+  --color-primary-text: var(--primary-text-color);
+  --color-secondary-text: var(--sec-text-color);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-roboto: var(--font-roboto);
+  --font-pixel: var(--font-geist-pixel-square);
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
