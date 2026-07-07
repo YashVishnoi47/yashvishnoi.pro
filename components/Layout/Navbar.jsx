@@ -1,5 +1,5 @@
 "use client";
-import { Moon, Sun } from "lucide-react";
+import { Check, Mail, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import {
@@ -8,9 +8,11 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Kbd } from "@/components/ui/kbd";
+import { toast } from "sonner";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
+  const [copied, setCopied] = useState(false);
 
   const changeTheme = () => {
     document.documentElement.classList.toggle("dark");
@@ -30,6 +32,24 @@ const Navbar = () => {
     };
   }, []);
 
+  const copyToClipboard = async (text = "hello@yashvishnoi.pro") => {
+    try {
+      await navigator.clipboard.writeText(text);
+
+      setCopied(true);
+      toast.success("Copied to clipboard!");
+
+      // Reset after 2 seconds
+      setTimeout(() => setCopied(false), 2000);
+
+      return true;
+    } catch (error) {
+      console.error("Failed to copy:", error);
+      toast.error("Failed to copy.");
+      return false;
+    }
+  };
+
   const links = [
     {
       name: "Home",
@@ -48,6 +68,7 @@ const Navbar = () => {
       href: "/",
     },
   ];
+
   return (
     <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line">
       <div className="w-[800px] border-r border-line h-full flex justify-between items-center px-1">
@@ -79,52 +100,92 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Github */}
-          <Tooltip>
-            <TooltipTrigger delay={"100"}>
-              {" "}
-              <Link
-                className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] "
-                target="_blank"
-                href="https://github.com/YashVishnoi47/yashvishnoi.pro"
-              >
-                <GithubSVG />
-                <span className="ml2 text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out">
-                  Github
-                </span>
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Visit Github</p>
-            </TooltipContent>
-          </Tooltip>
+          <div className="flex justify-center items-center gap-1">
+            {/* Github */}
+            <Tooltip>
+              <TooltipTrigger delay={"100"}>
+                {" "}
+                <Link
+                  className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] "
+                  target="_blank"
+                  href="https://github.com/YashVishnoi47/yashvishnoi.pro"
+                >
+                  <GithubSVG />
+                  <span className="ml2 text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out">
+                    Github
+                  </span>
+                </Link>
+              </TooltipTrigger>
 
-          <Tooltip>
-            <TooltipTrigger delay={"100"}>
-              {" "}
-              <div
-                onClick={changeTheme}
-                className="flex justify-center items-center px-3 py-1 cursor-pointer border-l border-line"
-              >
-                {theme === "light" ? (
-                  <Moon
-                    size={16}
-                    className="text-secondary-text hover:text-primary-text"
-                  />
-                ) : (
-                  <Sun
-                    size={16}
-                    className="text-secondary-text hover:text-primary-text"
-                  />
-                )}
-              </div>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>
-                Toggle Theme <Kbd>D</Kbd>
-              </p>
-            </TooltipContent>
-          </Tooltip>
+              <TooltipContent>
+                <p>Visit Github</p>
+              </TooltipContent>
+            </Tooltip>
+            <div className="w-[0.5px] h-6 bg-line" />
+            {/* Email */}
+            <Tooltip>
+              <TooltipTrigger delay={"100"}>
+                {" "}
+                <div
+                  className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group 
+                transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] cursor-pointer"
+                  onClick={() => copyToClipboard()}
+                >
+                  {copied ? (
+                    <Check
+                      size={16}
+                      className="text-secondary-text group-hover:text-primary-text"
+                    />
+                  ) : (
+                    <Mail
+                      size={18}
+                      className="text-secondary-text group-hover:text-primary-text"
+                    />
+                  )}
+                  <span
+                    className={`text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out`}
+                  >
+                    {copied ? "Copied" : "Email"}
+                  </span>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  {/* Click to Copy <Kbd>hello@yashvishnoi.pro</Kbd> */}
+                  hello@yashvishnoi.pro
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+
+          <div className="flex justify-center items-center gap-1 px-1 border-l border-line">
+            <Tooltip>
+              <TooltipTrigger delay={"100"}>
+                {" "}
+                <div
+                  className="flex justify-center items-center px-2 py-1 cursor-pointer border-line"
+                  onClick={changeTheme}
+                >
+                  {theme === "light" ? (
+                    <Moon
+                      size={16}
+                      className="text-secondary-text hover:text-primary-text"
+                    />
+                  ) : (
+                    <Sun
+                      size={16}
+                      className="text-secondary-text hover:text-primary-text"
+                    />
+                  )}
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  Toggle Theme <Kbd>D</Kbd>
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
         </div>
       </div>
     </div>
