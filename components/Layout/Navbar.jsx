@@ -13,7 +13,7 @@ const Navbar = () => {
   const [theme, setTheme] = useState("light");
 
   const changeTheme = () => {
-    document.body.classList.toggle("dark");
+    document.documentElement.classList.toggle("dark");
     setTheme(theme === "light" ? "dark" : "light");
   };
   useEffect(() => {
@@ -37,7 +37,7 @@ const Navbar = () => {
     },
     {
       name: "2-min Demo",
-      href: "/about",
+      href: "/demo",
     },
     {
       name: "About",

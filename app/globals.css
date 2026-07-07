@@ -7,6 +7,7 @@
 :root {
   --line-color: hsl(0, 0%, 80%);
   --bg: #ffffff;
+  --button-bg:hsl(0,0%,95%);
   --max-width: 800px;
   --primary-text-color: hsl(0, 0%, 5%);
   --sec-text-color: hsl(0, 0%,40%);
@@ -46,6 +47,7 @@
 
 .dark{
   --bg: #000000;
+  --button-bg:hsl(0,0%,5%);
   --line-color: hsl(0, 0%, 10%);
   --primary-text-color: hsl(0, 0%, 95%);
   --sec-text-color: hsl(0, 0%,60%);
@@ -84,6 +86,7 @@
 
 @theme inline {
   --color-background: var(--bg);
+  --color-button-bg: var(--button-bg);
   --color-foreground: var(--foreground);
   --color-line: var(--line-color);
   --color-primary-text: var(--primary-text-color);

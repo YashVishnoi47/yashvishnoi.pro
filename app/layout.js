@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${GeistPixelSquare.variable} h-full antialiased flex justify-center items-center`}
+      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${GeistPixelSquare.variable} h-full antialiased flex justify-center items-start`}
     >
-      <body className="min-h-full max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto bg-background">
+      <body className="min-h-fit max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto bg-background dark:selection:bg-white dark:selection:text-black selection:bg-black selection:text-white">
         <Navbar />
         <TooltipProvider>{children}</TooltipProvider>
       </body>
