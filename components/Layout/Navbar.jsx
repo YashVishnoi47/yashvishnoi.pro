@@ -1,6 +1,5 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import {
@@ -50,13 +49,13 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="w-full h-15 flex fixed top-0 bg-background justify-center items-center border-b border-line">
+    <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line">
       <div className="w-[800px] border-r border-line h-full flex justify-between items-center px-1">
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
-          <div className="w-12 h-12 rounded-lg bg-black/10" />
-          <h1 className="md:text-[24px] text-[18px] font-bold cursor-pointer text-primary-text font-pixel leading-tight tracking-tight ">
+          <div className="w-12 h-12 rounded-full dark:bg-white/10 bg-black/10" />
+          {/* <h1 className="md:text-[24px] text-[18px] font-bold cursor-pointer text-primary-text font-pixel leading-tight tracking-tight ">
             Yash Vishnoi
-          </h1>
+          </h1> */}
         </div>
 
         <div className="md:w-[70%] w-[50%] h-full gap-2 flex justify-end items-center">
