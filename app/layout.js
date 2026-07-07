@@ -2,7 +2,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import { GeistPixelSquare } from "geist/font/pixel";
-
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +28,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${GeistPixelSquare.variable} h-full antialiased `}
+      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${GeistPixelSquare.variable} h-full antialiased flex justify-center items-center`}
     >
-      <body className="min-h-full max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto">
+      <body className="min-h-full max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto bg-background">
         <Navbar />
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   );
