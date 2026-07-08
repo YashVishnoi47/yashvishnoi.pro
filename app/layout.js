@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import { GeistPixelSquare } from "geist/font/pixel";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${GeistPixelSquare.variable} h-full antialiased flex justify-center items-start`}
     >
       <body className="min-h-fit max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto bg-background dark:selection:bg-white dark:selection:text-black selection:bg-black selection:text-white">
+         <Toaster />
         <Navbar />
         <TooltipProvider>{children}</TooltipProvider>
       </body>

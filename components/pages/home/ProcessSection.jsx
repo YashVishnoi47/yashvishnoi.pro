@@ -18,7 +18,7 @@ import {
 import React from "react";
 
 const ProcessSection = () => {
-  const [open, setOpen] = React.useState(null);
+  const [open, setOpen] = React.useState([]);
   const steps = [
     {
       heading: "Discovery Call",
@@ -106,6 +106,8 @@ const ProcessSection = () => {
     },
   ];
 
+  
+
   return (
     <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`Our Process`} />
@@ -121,7 +123,13 @@ const ProcessSection = () => {
           >
             <div
               className="w-full h-15 flex justify-center items-center px-4 hover:bg-line/20 cursor-pointer"
-              onClick={() => setOpen(open === idx ? null : idx)}
+              onClick={() =>
+                setOpen((prev) =>
+                  prev.includes(idx)
+                    ? prev.filter((item) => item !== idx)
+                    : [...prev, idx],
+                )
+              }
             >
               <div className="w-full flex gap-2 items-center justify-between ">
                 <div className="flex justify-center items-center gap-4">
@@ -135,7 +143,7 @@ const ProcessSection = () => {
                   <p className="text-[14px] text-secondary-text">
                     Step {idx + 1}
                   </p>
-                  {open === idx ? (
+                  {open.includes(idx) ? (
                     <ChevronsDownUp size={16} className="text-secondary-text" />
                   ) : (
                     <ChevronsUpDown size={16} className="text-secondary-text" />
@@ -144,7 +152,7 @@ const ProcessSection = () => {
               </div>
             </div>
 
-            {open === idx && (
+            {open.includes(idx) && (
               <div className="flex flex-col justify-start items-start px-12 gap-2 relative pb-2">
                 <div className="h-full w-[1px] bg-line absolute left-8 -top-5" />
 
