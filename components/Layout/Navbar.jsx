@@ -70,7 +70,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line">
+    <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line z-10000">
       <div className="w-[800px] border-r border-line h-full flex justify-between items-center px-1">
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
           <div className="w-12 h-12 rounded-full dark:bg-white/10 bg-black/10" />
