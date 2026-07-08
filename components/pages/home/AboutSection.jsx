@@ -52,7 +52,7 @@ const AboutSection = () => {
           day one, with no unnecessary complexity.
         </p>
       </div>
-      <div className="w-full h-10 flex justify-center items-center border-y border-line">
+      {/* <div className="w-full h-10 flex justify-center items-center border-y border-line">
         <div className="h-full w-[20%] border-r border-line p-4 flex justify-start items-center">
           <span className="text-[14px] text-secondary-text font-medium">
             Follow me -{" "}
@@ -70,7 +70,7 @@ const AboutSection = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
