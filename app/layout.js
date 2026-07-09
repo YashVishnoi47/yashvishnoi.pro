@@ -5,6 +5,7 @@ import { GeistPixelSquare } from "geist/font/pixel";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "sonner";
 import Footer from "@/components/Layout/Footer";
+import UniFooterCTA from "@/components/Layout/UniFooterCTA";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         <Toaster />
         <Navbar />
         <TooltipProvider>{children}</TooltipProvider>
+        <UniFooterCTA />
         <Footer />
       </body>
     </html>

@@ -109,7 +109,7 @@ const ProcessSection = () => {
   
 
   return (
-    <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div id="process" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`Our Process`} />
 
       <div className="w-full flex flex-col justify-start items-start gap-">

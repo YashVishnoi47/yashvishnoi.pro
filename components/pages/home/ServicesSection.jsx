@@ -68,7 +68,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div id="features" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`Your 24/7 Intake System`} />
 
       <div className="w-full h-fit border-line flex justify-center items-center flex-wrap">

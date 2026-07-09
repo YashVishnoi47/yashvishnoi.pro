@@ -22,7 +22,7 @@ const AboutSection = () => {
     },
   ];
   return (
-    <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div id="about" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`About me`} />
 
       <div className="w-full flex flex-col gap-4 justify-start items-start p-4">

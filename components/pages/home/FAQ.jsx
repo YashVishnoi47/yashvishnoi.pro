@@ -42,7 +42,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div id="faq" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`FAQ's`} />
 
       <div className="w-full h-fit flex justify-center items-start flex-wrap">

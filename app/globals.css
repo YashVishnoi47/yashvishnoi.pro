@@ -11,6 +11,7 @@
 :root {
   --line-color: hsl(0, 0%, 80%);
   --line-color-lite: hsl(0, 0%, 90%);
+  --line-color-pat-lite: hsl(0, 0%, 98%);
   --bg: #ffffff;
   --button-bg:hsl(0,0%,95%);
   --max-width: 800px;
@@ -52,9 +53,10 @@
 
 .dark{
   --bg: #000000;
-  --button-bg:hsl(0,0%,5%);
+  --button-bg:hsl(0,0%,2%);
   --line-color: hsl(0, 0%, 10%);
   --line-color-lite: hsl(0, 0%, 10%);
+  --line-color-pat-lite: hsl(0, 0%, 5%);
   --primary-text-color: hsl(0, 0%, 95%);
   --sec-text-color: hsl(0, 0%,60%);
   --background: oklch(0.145 0 0);
@@ -96,6 +98,7 @@
   --color-foreground: var(--foreground);
   --color-line: var(--line-color);
   --color-line-lite: var(--line-color-lite);
+  --color-line-pat-lite: var(--line-color-pat-lite);
   --color-primary-text: var(--primary-text-color);
   --color-secondary-text: var(--sec-text-color);
   --font-sans: var(--font-sans);

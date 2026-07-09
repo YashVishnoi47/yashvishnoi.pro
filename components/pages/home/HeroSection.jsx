@@ -3,10 +3,14 @@ import VideoBox from "./VideoBox";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import SecondaryButton from "@/components/ui/SecondaryButton";
 import { Video } from "lucide-react";
+import PrimaryButtonDark from "@/components/ui/PrimaryButtonDark";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-fit flex flex-col justify-start gap-8 items-start mt-12 px-4">
+    <div
+      id="#home"
+      className="w-full h-fit flex flex-col justify-start gap-8 items-start mt-12 px-4"
+    >
       <div className="w-full flex flex-col justify-start items-start gap-6">
         <h1 className="md:text-[64px] sm:text-[54px] text-[42px] text-primary-text font-pixel font-bold text-balance leading-[1.10] tracking-tight">
           Turn missed calls into revenue

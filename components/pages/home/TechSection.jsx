@@ -199,7 +199,7 @@ const TechSection = () => {
     },
   ];
   return (
-    <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div id="tech" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`Our Tech Stack`} />
 
       <div className="w-full h-fit flex flex-col justify-center items-center">

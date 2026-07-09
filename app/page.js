@@ -17,7 +17,7 @@ export default function Home() {
       <TechSection />
       <AboutSection />
       <FAQ />
-      <FooterCTA />
+      <FooterCTA /> {/* Bonus Elements */}
     </div>
   );
 }
