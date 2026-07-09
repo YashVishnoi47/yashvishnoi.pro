@@ -9,7 +9,7 @@ import VideoBox from "@/components/pages/home/VideoBox";
 
 export default function Home() {
   return (
-    <div className="max-w-[800px] gap-12 w-full min-h-[200vh] border dark:border-t-black border-t-white border-line flex flex-col justify-start items-start border-b-white">
+    <div className="max-w-[800px] gap-12 w-full min-h-[200vh] border dark:border-t-black border-t-white border-line flex flex-col justify-start items-start border-b-background">
       <HeroSection />
       <VideoBox />
       <ServicesSection />

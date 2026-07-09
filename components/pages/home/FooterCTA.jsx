@@ -6,7 +6,7 @@ const FooterCTA = () => {
     <div className="w-full h-fit flex flex-col justify-start gap-4 items-start">
       <SubHeadBox text={`Bonus`} />
 
-      <div className="w-full h-50"></div>
+      <div className="w-full h-80"></div>
     </div>
   );
 };

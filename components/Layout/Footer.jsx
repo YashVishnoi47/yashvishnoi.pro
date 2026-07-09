@@ -64,8 +64,8 @@ const Footer = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center border border-line h-fit">
-      <div className="max-w-[800px] flex w-full h-full border-x border-line">
-        <div className="w-1/2 h-fit flex flex-col justify-start items-start p-4 gap-4  border-r border-line">
+      <div className="max-w-[800px] flex w-full h-full border-x border-line ">
+        <div className="w-1/2 h-fit flex flex-col justify-start items-start p-4 gap-4 border-r border-line">
           <span className="text-[16px] text-secondary-text">Navigate</span>
 
           <div className="w-[85%] flex gap-x-2 gap-y-2 flex-wrap justify-start items-start">
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         <div className="w-1/2 h-fit flex flex-col justify-start items-start p-4 gap-4">
-          <span className="text-[16px] text-secondary-text">Contact</span>
+          <span className="text-[16px] text-secondary-text">Connect</span>
 
           <div className="w-[95%] flex gap-x-2 gap-y-2 flex-wrap justify-start items-start">
             {socials.map((item, idx) => (
@@ -107,7 +107,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex justify-center items-center border-t border-line">
-        <div className="max-w-[800px] flex w-full h-fit border-x border-line px-4 py-6 border-t flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-t-background">
+        <div className="max-w-[800px] flex w-full h-fit border-x border-line px-4 py-6  flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-t border-t-background">
           <p className="text-[14px] text-secondary-text">
             Built and designed by{" "}
             <Link
