@@ -1,5 +1,6 @@
 import AboutSection from "@/components/pages/home/AboutSection";
 import FAQ from "@/components/pages/home/FAQ";
+import FooterCTA from "@/components/pages/home/FooterCTA";
 import HeroSection from "@/components/pages/home/HeroSection";
 import ProcessSection from "@/components/pages/home/ProcessSection";
 import ServicesSection from "@/components/pages/home/ServicesSection";
@@ -16,8 +17,7 @@ export default function Home() {
       <TechSection />
       <AboutSection />
       <FAQ />
-
-      {/* <div className="h-[50vh]"></div> */}
+      <FooterCTA />
     </div>
   );
 }

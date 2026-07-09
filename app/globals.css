@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+*{
+  scroll-behavior: smooth;
+}
+
 :root {
   --line-color: hsl(0, 0%, 80%);
   --line-color-lite: hsl(0, 0%, 90%);

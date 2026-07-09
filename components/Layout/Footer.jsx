@@ -1,38 +1,42 @@
 import Link from "next/link";
 import React from "react";
-import { CiMail } from "react-icons/ci";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Footer = () => {
   const links = [
     {
       name: "Home",
-      link: "/",
+      link: "/#",
     },
     {
       name: "Demo",
-      link: "/",
+      link: "/#demo",
     },
     {
       name: "Features",
-      link: "/",
+      link: "/#features",
     },
     {
       name: "Process",
-      link: "/",
+      link: "/#process",
     },
     {
       name: "Tech Stack",
-      link: "/",
+      link: "/#tech",
     },
     {
       name: "About",
-      link: "/",
+      link: "/#about",
     },
     {
       name: "FAQ's",
-      link: "/",
+      link: "/#faq",
     },
   ];
   const socials = [
@@ -82,14 +86,21 @@ const Footer = () => {
 
           <div className="w-[95%] flex gap-x-2 gap-y-2 flex-wrap justify-start items-start">
             {socials.map((item, idx) => (
-              <Link
-                className="text-[14px] p-2 border border-line rounded-[4px] bg-line/20 text-secondary-text hover:bg-line/40 hover:text-primary-text font-medium"
-                href={item.link}
-                target={item.name !== "Mail" ? "_blank" : ""}
-                key={idx}
-              >
-                {item.icons}
-              </Link>
+              <Tooltip key={idx}>
+                <Link
+                  href={item.link}
+                  target={item.name !== "Mail" ? "_blank" : ""}
+                >
+                  <TooltipTrigger
+                    className={
+                      "text-[14px] p-2 border border-line rounded-[4px] bg-line/20 text-secondary-text hover:bg-line/40 hover:text-primary-text font-medium transition-all duration-200 ease-in-out cursor-pointer"
+                    }
+                  >
+                    {item.icons}
+                  </TooltipTrigger>
+                </Link>
+                <TooltipContent>{item.name}</TooltipContent>
+              </Tooltip>
             ))}
           </div>
         </div>

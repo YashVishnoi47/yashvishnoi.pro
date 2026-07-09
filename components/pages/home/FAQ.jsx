@@ -82,7 +82,7 @@ const FAQ = () => {
           </div>
         ))}
 
-        <div className="w-full h-12 flex gap-1 justify-center items-center">
+        <div className="w-full h-12 flex gap-1 justify-center items-center border-b border-line">
           <span className="text-[14px] text-secondary-text">
             Can't find the answer you're looking for?
           </span>

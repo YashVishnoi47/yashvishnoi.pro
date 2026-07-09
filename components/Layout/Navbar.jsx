@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Kbd } from "@/components/ui/kbd";
 import { toast } from "sonner";
+import Image from "next/image";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -53,19 +54,19 @@ const Navbar = () => {
   const links = [
     {
       name: "Home",
-      href: "/",
+      href: "/#",
     },
     {
-      name: "2-min Demo",
-      href: "/demo",
+      name: "Demo ",
+      href: "/#demo",
     },
     {
       name: "About",
-      href: "/about",
+      href: "/#about",
     },
     {
       name: "Process",
-      href: "/",
+      href: "/#process",
     },
   ];
 
@@ -73,10 +74,17 @@ const Navbar = () => {
     <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line z-5">
       <div className="w-[800px] border-r border-line h-full flex justify-between items-center px-1">
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
-          <div className="w-12 h-12 rounded-full dark:bg-white/10 bg-black/10" />
-          {/* <h1 className="md:text-[24px] text-[18px] font-bold cursor-pointer text-primary-text font-pixel leading-tight tracking-tight ">
-            Yash Vishnoi
-          </h1> */}
+          <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:scale-[0.95] transition-all duration-300 ease-out">
+            <Image
+              src={"/yash-vishnoi.jpeg"}
+              width={48}
+              height={48}
+              objectFit="cover"
+              className="rounded-full w-full h-full"
+              unoptimized
+              alt="logo"
+            />
+          </div>
         </div>
 
         <div className="md:w-[70%] w-[50%] h-full gap-2 flex justify-end items-center">
