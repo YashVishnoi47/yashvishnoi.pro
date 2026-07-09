@@ -42,17 +42,17 @@ const Footer = () => {
   const socials = [
     {
       icons: <FaXTwitter size={14} />,
-      link: "https://twitter.com/yourhandle",
+      link: "https://x.com/Yash_Vishnoi7",
       name: "Twitter / X",
     },
     {
       icons: <FaLinkedin size={14} />,
-      link: "https://linkedin.com/in/yourhandle",
+      link: "https://www.linkedin.com/in/yash-vishnoi-654318384/",
       name: "LinkedIn",
     },
     {
       icons: <FaGithub size={14} />,
-      link: "https://github.com/yourhandle",
+      link: "https://github.com/YashVishnoi47/yashvishnoi.pro",
       name: "GitHub",
     },
     {
@@ -64,11 +64,11 @@ const Footer = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center border border-line h-fit">
-      <div className="max-w-[800px] flex w-full h-full border-x border-line ">
-        <div className="w-1/2 h-fit flex flex-col justify-start items-start p-4 gap-4 border-r border-line">
+      <div className="max-w-[800px] flex flex-col w-full h-full border-x border-line ">
+        <div className="w-full h-fit flex flex-col justify-center items-center p-4 gap-4 border-b border-line">
           <span className="text-[16px] text-secondary-text">Navigate</span>
 
-          <div className="w-[85%] flex gap-x-2 gap-y-2 flex-wrap justify-start items-start">
+          <div className="w-[40%] flex gap-x-4 gap-y-2 flex-wrap justify-center items-center">
             {links.map((item, idx) => (
               <Link
                 className="text-[14px] text-secondary-text hover:text-primary-text"
@@ -81,10 +81,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-1/2 h-fit flex flex-col justify-start items-start p-4 gap-4">
+        <div className="w-full h-fit flex flex-col justify-center items-center p-4 gap-4">
           <span className="text-[16px] text-secondary-text">Connect</span>
 
-          <div className="w-[95%] flex gap-x-2 gap-y-2 flex-wrap justify-start items-start">
+          <div className="w-[95%] flex gap-x-2 gap-y-2 flex-wrap justify-center items-start">
             {socials.map((item, idx) => (
               <Tooltip key={idx}>
                 <Link
