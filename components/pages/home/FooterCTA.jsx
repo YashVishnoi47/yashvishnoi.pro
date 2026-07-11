@@ -26,12 +26,12 @@ const FooterCTA = () => {
     <div className="w-full h-fit flex flex-col justify-start items-start">
       <SubHeadBox text={`Bonus Elements`} />
 
-      <div className="w-full h-80 flex p- justify-center items-center gap-">
+      <div className="w-full min-h-80 flex md:flex-row flex-col justify-center items-center gap-">
         {offers.map((item, idx) => (
           <div
             key={idx}
             className={cn(
-              "w-1/2 h-full relative p-4 flex flex-col justify-center items-center border-line bg-line/5 gap-2",
+              "md:w-1/2  w-full h-80 relative p-4 flex flex-col justify-center items-center border-line bg-line/5 gap-2",
               idx === 0 && "border-r",
             )}
           >
