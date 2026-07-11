@@ -76,7 +76,7 @@ const ServicesSection = () => {
           <div
             key={idx}
             className={cn(
-              "h-14 md:w-[50%] w-full flex justify-start items-center gap-4 p-4 border border-line cursor-pointer bg-background hover:bg-black/3 dark:hover:bg-white/5 group transition-all duration-300 ease-in-out",
+              "h-14 md:w-[50%] w-full flex justify-start items-center gap-4 p-4 border-y border-line cursor-pointer bg-background hover:bg-black/3 dark:hover:bg-white/5 group transition-all duration-300 ease-in-out border-r",
             )}
           >
             <div className="p-2 border border-line bg-line/15 rounded-sm">

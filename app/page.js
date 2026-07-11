@@ -4,7 +4,6 @@ import FooterCTA from "@/components/pages/home/FooterCTA";
 import HeroSection from "@/components/pages/home/HeroSection";
 import ProcessSection from "@/components/pages/home/ProcessSection";
 import ServicesSection from "@/components/pages/home/ServicesSection";
-import TechSection from "@/components/pages/home/TechSection";
 import VideoBox from "@/components/pages/home/VideoBox";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <VideoBox />
       <ServicesSection />
       <ProcessSection />
-      <TechSection />
       <AboutSection />
       <FAQ />
       <FooterCTA /> {/* Bonus Elements */}
