@@ -106,10 +106,11 @@ const ProcessSection = () => {
     },
   ];
 
-  
-
   return (
-    <div id="process" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div
+      id="process"
+      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+    >
       <SubHeadBox text={`Our Process`} />
 
       <div className="w-full flex flex-col justify-start items-start gap-">
@@ -122,7 +123,7 @@ const ProcessSection = () => {
             key={idx}
           >
             <div
-              className="w-full h-15 flex justify-center items-center px-4 hover:bg-line/20 cursor-pointer"
+              className="w-full h-15 flex justify-center items-center px-4 hover:bg-line/20 cursor-pointer transition-all duration-300 ease-in-out"
               onClick={() =>
                 setOpen((prev) =>
                   prev.includes(idx)

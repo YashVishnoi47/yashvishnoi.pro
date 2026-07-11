@@ -42,12 +42,18 @@ const FAQ = () => {
     },
   ];
   return (
-    <div id="faq" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div
+      id="faq"
+      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+    >
       <SubHeadBox text={`FAQ's`} />
 
       <div className="w-full h-fit flex justify-center items-start flex-wrap">
         {FAQS.map((item, idx) => (
-          <div className="h-fit md:w-[50%] w-full flex flex-col justify-start items-start border-y border-line border-r ">
+          <div
+            key={idx}
+            className="h-fit md:w-[50%] w-full flex flex-col justify-start items-start border-y border-line border-r "
+          >
             <div
               key={idx}
               onClick={() => {
@@ -82,7 +88,12 @@ const FAQ = () => {
           </div>
         ))}
 
-        <div className="w-full h-12 flex gap-1 justify-center items-center border-b border-line">
+        <div
+          className={cn(
+            "w-full h-12 flex gap-1 justify-center items-center border-b border-line",
+            open.includes(5) || (open.includes(7) && "border-t"),
+          )}
+        >
           <span className="text-[14px] text-secondary-text">
             Can't find the answer you're looking for?
           </span>

@@ -52,26 +52,26 @@ const TechSection = () => {
         },
       ],
     },
-    {
-      heading: "Artificial Intelligence",
-      techs: [
-        {
-          name: "ChatGPT",
-          icon: null,
-          link: "https://chat.openai.com/",
-        },
-        {
-          name: "Claude",
-          icon: null, // no reliable Simple Icons entry as of my knowledge
-          link: "https://claude.ai",
-        },
-        {
-          name: "Gemini",
-          icon: null, // same issue
-          link: "https://gemini.google.com",
-        },
-      ],
-    },
+    // {
+    //   heading: "Artificial Intelligence",
+    //   techs: [
+    //     {
+    //       name: "ChatGPT",
+    //       icon: null,
+    //       link: "https://chat.openai.com/",
+    //     },
+    //     {
+    //       name: "Claude",
+    //       icon: null, // no reliable Simple Icons entry as of my knowledge
+    //       link: "https://claude.ai",
+    //     },
+    //     {
+    //       name: "Gemini",
+    //       icon: null, // same issue
+    //       link: "https://gemini.google.com",
+    //     },
+    //   ],
+    // },
     {
       heading: "Frontend",
       techs: [
