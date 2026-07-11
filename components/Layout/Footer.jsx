@@ -26,10 +26,10 @@ const Footer = () => {
       name: "Process",
       link: "/#process",
     },
-    {
-      name: "Tech Stack",
-      link: "/#tech",
-    },
+    // {
+    //   name: "Tech Stack",
+    //   link: "/#tech",
+    // },
     {
       name: "About",
       link: "/#about",
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className="w-full h-fit flex flex-col justify-center items-center p-4 gap-4 border-b border-line">
           <span className="text-[16px] text-secondary-text">Navigate</span>
 
-          <div className="w-[40%] flex gap-x-4 gap-y-2 flex-wrap justify-center items-center">
+          <div className="w-[35%] flex gap-x-4 gap-y-2 flex-wrap justify-center items-center">
             {links.map((item, idx) => (
               <Link
                 className="text-[14px] text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out"

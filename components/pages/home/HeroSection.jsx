@@ -15,14 +15,12 @@ const HeroSection = () => {
         <h1 className="md:text-[64px] sm:text-[54px] text-[42px] text-primary-text font-pixel font-bold text-balance leading-[1.10] tracking-tight">
           Turn missed calls into revenue
         </h1>
-        <h2 className="md:w-[90%] w-full md:text-[18px] text-[14px] font-medium text-secondary-text text-pretty">
-          We build AI receptionists for law firms and service-based businesses
-          that answer calls 24/7, capture and qualify leads, book appointments
-          automatically.
+        <h2 className="md:w-[85%] w-full md:text-[18px] text-[14px] font-medium text-secondary-text text-pretty">
+          Legal Intake OS™ is an AI receptionist for law firms — answering calls 24/7, qualifying leads, and booking consultations automatically, so no client ever reaches voicemail.
         </h2>
 
         <div className="w-full flex justify-start items-start gap-4">
-          <PrimaryButton arrow={true} text="Book a call" />
+          <PrimaryButtonDark arrow={true} text="Book a call" />
           <SecondaryButton text="Watch Demo" />
         </div>
       </div>
