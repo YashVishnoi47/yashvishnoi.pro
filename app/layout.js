@@ -91,7 +91,7 @@ export const metadata = {
     description:
       "24/7 AI receptionist that answers calls, qualifies leads, and books consultations for law firms — automatically.",
     images: ["/og-image.png"],
-    creator: "@yourtwitterhandle",
+    creator: "https://x.com/Yash_Vishnoi7",
   },
 
   icons: {
