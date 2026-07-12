@@ -24,7 +24,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://yashvishnoi.pro"), // replace with your real domain
+  metadataBase: new URL("https://yashvishnoi.pro"),
 
   title: {
     default: "Legal Intake OS™ — AI Receptionist for Law Firms | Yash Vishnoi",
