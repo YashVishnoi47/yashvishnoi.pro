@@ -75,6 +75,7 @@ const Navbar = () => {
       <div className="w-[800px] border-r border-line h-full flex justify-between items-center px-1">
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
           <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:scale-[0.95] transition-all duration-300 ease-out">
+            <Link href="/">
             <Image
               src={"/yash-vishnoi.jpeg"}
               width={48}
@@ -84,6 +85,7 @@ const Navbar = () => {
               unoptimized
               alt="logo"
             />
+            </Link>
           </div>
         </div>
 
