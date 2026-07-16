@@ -9,12 +9,12 @@ export default function sitemap() {
       priority: 1,
     },
     // Add new entries here as you add real pages, e.g.:
-    // {
-    //   url: `${baseUrl}/blog`,
-    //   lastModified: new Date(),
-    //   changeFrequency: "weekly",
-    //   priority: 0.8,
-    // },
+    {
+      url: `${baseUrl}/bookCall`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     // {
     //   url: `${baseUrl}/privacy`,
     //   lastModified: new Date(),
