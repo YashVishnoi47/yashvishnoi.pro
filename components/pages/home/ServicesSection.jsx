@@ -61,7 +61,7 @@ const ServicesSection = () => {
       logo: <MailCheck className="size-5 text-secondary-text" />,
     },
     {
-      name: "Email Follow-Up",
+      name: "Email Reminders",
       desc: "Every lead is sent a follow-up email.",
       logo: <MailCheck className="size-5 text-secondary-text" />,
     },
