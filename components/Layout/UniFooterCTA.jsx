@@ -37,7 +37,7 @@ const UniFooterCTA = () => {
         />
 
         <div className="w-full flex justify-center items-center flex-col">
-          <p className="w-[70%] flex flex-wrap justify-center items-center text-center text-[42px] text-primary-text font-bold text-balance leading-tight">
+          <p className="w-[70%] flex flex-wrap justify-center items-center text-center md:text-[42px] text-[28px] text-primary-text font-bold text-balance leading-tight">
             {text.split(" ").map((word, idx) => (
               <motion.span
                 initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
@@ -55,7 +55,7 @@ const UniFooterCTA = () => {
               </motion.span>
             ))}
           </p>
-          <p className="w-[90%] text-center text-[42px] text-primary-text font-bold text-balance leading-tight relative z-2 flex flex-wrap justify-center items-center">
+          <p className="w-[90%] text-center md:text-[42px] text-[28px] text-primary-text font-bold text-balance leading-tight relative z-2 flex flex-wrap justify-center items-center">
             <motion.span
               initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
               whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}

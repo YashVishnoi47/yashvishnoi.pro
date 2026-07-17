@@ -8,9 +8,9 @@ const HeroSection = () => {
   return (
     <div
       id="#home"
-      className="w-full h-fit flex flex-col justify-start gap-8 items-start mt-8 px-4"
+      className="w-full h-fit flex flex-col justify-start gap-8 items-start px-4 mt-8 relative"
     >
-      <div className="w-full flex flex-col justify-start items-start gap-6">
+      <div className="w-full flex flex-col justify-start items-start gap-6  relative z-2">
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
