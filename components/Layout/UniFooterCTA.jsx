@@ -1,10 +1,16 @@
+"use client";
 import React from "react";
 import SubHeadBox from "./SubHeadBox";
 import PrimaryButton from "../ui/PrimaryButton";
 import SecondaryButton from "../ui/SecondaryButton";
 import PrimaryButtonDark from "../ui/PrimaryButtonDark";
+import { motion } from "framer-motion";
 
 const UniFooterCTA = () => {
+  const text = "Stop Losing Clients to";
+  const text2 = "Voicemail";
+  const text3 = " Start Booking Them";
+
   return (
     <div
       id="tech"
@@ -31,14 +37,55 @@ const UniFooterCTA = () => {
         />
 
         <div className="w-full flex justify-center items-center flex-col">
-          <p className="w-[70%] text-center text-[42px] text-primary-text font-bold text-balance leading-[1.20]">
-            Stop Losing Clients to
+          <p className="w-[70%] flex flex-wrap justify-center items-center text-center text-[42px] text-primary-text font-bold text-balance leading-tight">
+            {text.split(" ").map((word, idx) => (
+              <motion.span
+                initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.08 + idx * 0.08,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                viewport={{ once: true }}
+                key={idx}
+              >
+                {word}
+                {idx !== text.split(" ").length - 1 && "\u00A0"}
+              </motion.span>
+            ))}
           </p>
-          <p className="w-[90%] text-center text-[42px] text-primary-text font-bold text-balance leading-[1.20] relative z-2">
-            {/* <span className="w-[60%] h-[45%] bg-white -z-1 absolute right-4 bottom-0 -rotate-1" /> */}
-            Voicemail.{" "}
-            <span className="text-white bg-black dark:text-black dark:bg-white group relative z-2">
-              Start Booking Them
+          <p className="w-[90%] text-center text-[42px] text-primary-text font-bold text-balance leading-tight relative z-2 flex flex-wrap justify-center items-center">
+            <motion.span
+              initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
+              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+              transition={{
+                duration: 0.5,
+                delay: 0.08 + text.split(" ").length * 0.08,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              viewport={{ once: true }}
+            >
+              Voicemail.{"\u00A0"}
+            </motion.span>
+            <span className="text-white flex flex-wrap justify-center items-center w-fit bg-black dark:text-black dark:bg-white group relative z-2">
+              {text3.split(" ").map((word, idx) => (
+                <motion.span
+                  initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
+                  whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                  transition={{
+                    duration: 0.5,
+                    delay:
+                      0.08 + (text.split(" ").length + 1) * 0.08 + idx * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  viewport={{ once: true }}
+                  key={idx}
+                >
+                  {word}
+                  {idx !== text3.split(" ").length - 1 && "\u00A0"}
+                </motion.span>
+              ))}
             </span>
           </p>
         </div>

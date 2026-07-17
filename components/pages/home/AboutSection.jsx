@@ -1,7 +1,9 @@
+"use client";
 import SubHeadBox from "@/components/Layout/SubHeadBox";
 import Link from "next/link";
 import React from "react";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const socials = [
@@ -22,10 +24,23 @@ const AboutSection = () => {
     },
   ];
   return (
-    <div id="about" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div
+      id="about"
+      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+    >
       <SubHeadBox text={`About me`} />
 
-      <div className="w-full flex flex-col gap-4 justify-start items-start p-4">
+      <motion.div
+        initial={{ y: 22, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.36,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true }}
+        className="w-full flex flex-col gap-4 justify-start items-start p-4"
+      >
         <p className="text-[16px] text-secondary-text text-pretty">
           I'm{" "}
           <span className="text-primary-text font-medium">Yash Vishnoi</span>,
@@ -51,7 +66,7 @@ const AboutSection = () => {
           every project is the same: build something that works reliably, from
           day one, with no unnecessary complexity.
         </p>
-      </div>
+      </motion.div>
       {/* <div className="w-full h-10 flex justify-center items-center border-y border-line">
         <div className="h-full w-[20%] border-r border-line p-4 flex justify-start items-center">
           <span className="text-[14px] text-secondary-text font-medium">

@@ -1,3 +1,4 @@
+"use client";
 import SubHeadBox from "@/components/Layout/SubHeadBox";
 import { cn } from "@/lib/utils";
 import React from "react";
@@ -12,6 +13,7 @@ import {
   RefreshCw,
   MailCheck,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
   const services = [
@@ -68,10 +70,23 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div id="features" className="w-full h-fit flex flex-col justify-start gap-4 items-start">
+    <div
+      id="features"
+      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+    >
       <SubHeadBox text={`Your 24/7 Intake System`} />
 
-      <div className="w-full h-fit border-line flex justify-center items-center flex-wrap">
+      <motion.div
+        initial={{ y: 22, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.36,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true }}
+        className="w-full h-fit border-line flex justify-center items-center flex-wrap"
+      >
         {services.map((item, idx) => (
           <div
             key={idx}
@@ -87,7 +102,7 @@ const ServicesSection = () => {
             </p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

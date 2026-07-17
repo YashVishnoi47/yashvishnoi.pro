@@ -14,7 +14,7 @@ import {
   Rocket,
   TrendingUp,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 import React from "react";
 
 const ProcessSection = () => {
@@ -113,7 +113,17 @@ const ProcessSection = () => {
     >
       <SubHeadBox text={`Our Process`} />
 
-      <div className="w-full flex flex-col justify-start items-start gap-">
+      <motion.div
+        initial={{ y: 22, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.36,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true }}
+        className="w-full flex flex-col justify-start items-start gap-"
+      >
         {steps.map((step, idx) => (
           <div
             className={cn(
@@ -185,7 +195,7 @@ const ProcessSection = () => {
             )}
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

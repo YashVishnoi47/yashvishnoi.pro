@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   const [open, setOpen] = React.useState([]);
@@ -48,7 +49,17 @@ const FAQ = () => {
     >
       <SubHeadBox text={`FAQ's`} />
 
-      <div className="w-full h-fit flex justify-center items-start flex-wrap">
+      <motion.div
+        initial={{ y: 22, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.36,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true }}
+        className="w-full h-fit flex justify-center items-start flex-wrap"
+      >
         {FAQS.map((item, idx) => (
           <div
             key={idx}
@@ -104,7 +115,7 @@ const FAQ = () => {
             Talk to Yash
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

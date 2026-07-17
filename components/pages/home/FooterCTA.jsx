@@ -1,8 +1,10 @@
+"use client";
 import SubHeadBox from "@/components/Layout/SubHeadBox";
 import { cn } from "@/lib/utils";
 import React from "react";
 import { LuLayoutTemplate } from "react-icons/lu";
 import { SiHostinger } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const FooterCTA = () => {
   const offers = [
@@ -26,7 +28,17 @@ const FooterCTA = () => {
     <div className="w-full h-fit flex flex-col justify-start items-start">
       <SubHeadBox text={`Bonus Elements`} />
 
-      <div className="w-full min-h-80 flex md:flex-row flex-col justify-center items-center gap-">
+      <motion.div
+        initial={{ y: 22, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.36,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true }}
+        className="w-full min-h-80 flex md:flex-row flex-col justify-center items-center gap-"
+      >
         {offers.map((item, idx) => (
           <div
             key={idx}
@@ -55,7 +67,7 @@ const FooterCTA = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
