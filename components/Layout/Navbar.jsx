@@ -16,9 +16,24 @@ const Navbar = () => {
   const [copied, setCopied] = useState(false);
 
   const changeTheme = () => {
-    document.documentElement.classList.toggle("dark");
-    setTheme(theme === "light" ? "dark" : "light");
+    const newTheme = theme === "light" ? "dark" : "light";
+
+    setTheme(newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
   };
+
+  useEffect(() => {
+    const dtheme = localStorage.getItem("theme");
+
+    if (dtheme) {
+      setTheme(dtheme);
+      document.documentElement.classList.toggle("dark", dtheme === "dark");
+    } else {
+      localStorage.setItem("theme", theme);
+    }
+  }, []);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key.toLowerCase() === "d") {
@@ -76,15 +91,15 @@ const Navbar = () => {
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
           <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:scale-[0.95] transition-all duration-300 ease-out">
             <Link href="/">
-            <Image
-              src={"/yash-vishnoi.jpeg"}
-              width={48}
-              height={48}
-              objectFit="cover"
-              className="rounded-full w-full h-full"
-              unoptimized
-              alt="logo"
-            />
+              <Image
+                src={"/yash-vishnoi.jpeg"}
+                width={48}
+                height={48}
+                objectFit="cover"
+                className="rounded-full w-full h-full"
+                unoptimized
+                alt="logo"
+              />
             </Link>
           </div>
         </div>

@@ -2,11 +2,13 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import { GeistPixelSquare } from "geist/font/pixel";
+import { Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "sonner";
 import Footer from "@/components/Layout/Footer";
 import UniFooterCTA from "@/components/Layout/UniFooterCTA";
 import StructuredData from "@/structured-data";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +23,12 @@ const geistMono = Geist_Mono({
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-spaceGrotesk",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata = {
@@ -106,11 +114,20 @@ export const metadata = {
   applicationName: "Legal Intake OS™",
   category: "Technology",
 };
+
 export default function RootLayout({ children }) {
+  <Script id="theme" strategy="beforeInteractive">
+    {`
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+`}
+  </Script>;
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${GeistPixelSquare.variable} h-full antialiased flex justify-center items-start`}
+      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${spaceGrotesk.variable} h-full antialiased flex justify-center items-start`}
     >
       <head>
         <StructuredData />
