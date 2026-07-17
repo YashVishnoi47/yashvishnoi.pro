@@ -109,7 +109,7 @@ const FAQ = () => {
             Can't find the answer you're looking for?
           </span>
           <Link
-            href="/"
+            href="/bookCall"
             className="text-[14px] text-primary-text font-medium hover:underline"
           >
             Talk to Yash
