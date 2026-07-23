@@ -45,10 +45,8 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+      className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
     >
-      <SubHeadBox text={`FAQ's`} />
-
       <motion.div
         initial={{ y: 22, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -58,12 +56,15 @@ const FAQ = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full h-fit flex justify-center items-start flex-wrap"
+        className="w-full h-fit flex justify-center items-start flex-wrap my-4 border-t border-line"
       >
         {FAQS.map((item, idx) => (
           <div
             key={idx}
-            className="h-fit md:w-[50%] w-full flex flex-col justify-start items-start border-y border-line border-r "
+            className={cn(
+              "h-fit md:w-[50%] w-full flex flex-col justify-start items-start border-y border-line border-r border-t-background",
+              idx % 2 === 1 && "border-r-0",
+            )}
           >
             <div
               key={idx}

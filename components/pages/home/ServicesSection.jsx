@@ -72,10 +72,8 @@ const ServicesSection = () => {
   return (
     <div
       id="features"
-      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+      className="max-w-[800px] border-x border-line w-full h-fit flex flex-col justify-start gap-4 items-start"
     >
-      <SubHeadBox text={`Your 24/7 Intake System`} />
-
       <motion.div
         initial={{ y: 22, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -85,13 +83,14 @@ const ServicesSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full h-fit border-line flex justify-center items-center flex-wrap"
+        className="w-full h-fit border-line border-b flex justify-center items-center flex-wrap my-4"
       >
         {services.map((item, idx) => (
           <div
             key={idx}
             className={cn(
-              "h-14 md:w-[50%] w-full flex justify-start items-center gap-4 p-4 border-y border-line cursor-pointer bg-background hover:bg-black/3 dark:hover:bg-white/5 group transition-all duration-300 ease-in-out border-r",
+              "h-14 md:w-[50%] w-full flex justify-start items-center gap-4 p-4 border-y border-line cursor-pointer bg-background hover:bg-black/3 dark:hover:bg-white/5 group transition-all duration-300 ease-in-out border-r border-b-background",
+              idx % 2 === 1 && "border-r-0",
             )}
           >
             <div className="p-2 border border-line bg-line/15 rounded-sm">

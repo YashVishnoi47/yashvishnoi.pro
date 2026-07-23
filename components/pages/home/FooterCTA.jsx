@@ -25,8 +25,7 @@ const FooterCTA = () => {
   ];
 
   return (
-    <div className="w-full h-fit flex flex-col justify-start items-start">
-      <SubHeadBox text={`Bonus Elements`} />
+    <div className="max-w-[800px] w-full h-fit flex flex-col justify-start items-start border-x border-line">
 
       <motion.div
         initial={{ y: 22, opacity: 0 }}
@@ -37,7 +36,7 @@ const FooterCTA = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full min-h-80 flex md:flex-row flex-col justify-center items-center gap-"
+        className="w-full min-h-80 flex md:flex-row flex-col justify-center items-center"
       >
         {offers.map((item, idx) => (
           <div

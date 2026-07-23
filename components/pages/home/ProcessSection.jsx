@@ -109,9 +109,8 @@ const ProcessSection = () => {
   return (
     <div
       id="process"
-      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+      className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
     >
-      <SubHeadBox text={`Our Process`} />
 
       <motion.div
         initial={{ y: 22, opacity: 0 }}
@@ -122,7 +121,7 @@ const ProcessSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full flex flex-col justify-start items-start gap-"
+        className="w-full flex flex-col justify-start items-start my-4"
       >
         {steps.map((step, idx) => (
           <div

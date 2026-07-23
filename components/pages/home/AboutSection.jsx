@@ -26,9 +26,8 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className="w-full h-fit flex flex-col justify-start gap-4 items-start"
+      className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
     >
-      <SubHeadBox text={`About me`} />
 
       <motion.div
         initial={{ y: 22, opacity: 0 }}
@@ -39,7 +38,7 @@ const AboutSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full flex flex-col gap-4 justify-start items-start p-4"
+        className="w-full flex flex-col gap-4 justify-start items-start p-4 my-4"
       >
         <p className="text-[16px] text-secondary-text text-pretty">
           I'm{" "}

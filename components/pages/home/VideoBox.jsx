@@ -8,16 +8,14 @@ const VideoBox = () => {
   return (
     <div
       id="demo"
-      className="w-full aspect-video gap-4 flex flex-col justify-center items-center"
+      className="max-w-[800px] border-x border-line w-full aspect-video gap-4 flex flex-col justify-center items-center"
     >
-      <SubHeadBox text={"Demostrative Video"} />
-
       <motion.div
         initial={{ y: 22, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.32, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="w-[95%] h-[95%] rounded-xl bg-line/20 border-black"
+        className="w-[95%] h-[95%] rounded-xl bg-line/20 border-black my-4"
       />
     </div>
   );
