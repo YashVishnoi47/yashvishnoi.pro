@@ -7,6 +7,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import LogoBox from "../shared/LogoBox";
 
 const Footer = () => {
   const links = [
@@ -92,6 +93,7 @@ const Footer = () => {
                   target={item.name !== "Mail" ? "_blank" : ""}
                 >
                   <TooltipTrigger
+                    delay={100}
                     className={
                       "text-[14px] p-2 border border-line rounded-[4px] bg-line/20 text-secondary-text hover:bg-line/40 hover:text-primary-text font-medium transition-all duration-200 ease-in-out cursor-pointer"
                     }

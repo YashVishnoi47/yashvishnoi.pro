@@ -14,58 +14,59 @@ import {
   MailCheck,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import LogoBox from "@/components/shared/LogoBox";
 
 const ServicesSection = () => {
   const services = [
     {
       name: "24/7 Live Answering",
       desc: "No missed calls, no voicemail, no sick days.",
-      logo: <PhoneCall className="size-5 text-secondary-text" />,
+      logo: <PhoneCall className="size-5 " />,
     },
     {
       name: "Natural, Human-Like Voice",
       desc: "You choose the voice that fits your firm's tone.",
-      logo: <AudioLines className="size-5 text-secondary-text" />,
+      logo: <AudioLines className="size-5 " />,
     },
     {
       name: "Custom Knowledge Base",
       desc: "Trained on information your firm provides, to answer real questions accurately.",
-      logo: <BrainCog className="size-5 text-secondary-text" />,
+      logo: <BrainCog className="size-5 " />,
     },
     {
       name: "Lead Qualification",
       desc: "Every caller is asked the right questions before being passed along.",
-      logo: <ListChecks className="size-5 text-secondary-text" />,
+      logo: <ListChecks className="size-5 " />,
     },
     {
       name: "Emergency Detection & Routing",
       desc: "Urgent matters reach a human immediately.",
-      logo: <Siren className="size-5 text-secondary-text" />,
+      logo: <Siren className="size-5 " />,
     },
     {
       name: "Qualified-Lead Transfer",
       desc: "Only real prospects reach your team — your attorneys' time stays protected.",
-      logo: <UserCheck className="size-5 text-secondary-text" />,
+      logo: <UserCheck className="size-5 " />,
     },
     {
       name: "Calendar-Based Booking",
       desc: "Consultations are booked directly against attorney availability.",
-      logo: <CalendarCheck className="size-5 text-secondary-text" />,
+      logo: <CalendarCheck className="size-5 " />,
     },
     {
       name: "CRM Synchronization",
       desc: "Every lead is synced to your firm's CRM.",
-      logo: <RefreshCw className="size-5 text-secondary-text" />,
+      logo: <RefreshCw className="size-5 " />,
     },
     {
       name: "Email Follow-Up",
       desc: "Every lead is sent a follow-up email.",
-      logo: <MailCheck className="size-5 text-secondary-text" />,
+      logo: <MailCheck className="size-5" />,
     },
     {
       name: "Email Reminders",
       desc: "Every lead is sent a follow-up email.",
-      logo: <MailCheck className="size-5 text-secondary-text" />,
+      logo: <MailCheck className="size-5" />,
     },
   ];
 
@@ -93,9 +94,12 @@ const ServicesSection = () => {
               idx % 2 === 1 && "border-r-0",
             )}
           >
-            <div className="p-2 border border-line bg-line/15 rounded-sm">
+            {/* <div className="p-2 border border-line bg-line/15 rounded-sm">
               {item.logo}
-            </div>
+            </div> */}
+
+            <LogoBox>{item.logo}</LogoBox>
+
             <p className="text-[15px] text-primary-text ">
               {item.name || "Some text here"}
             </p>

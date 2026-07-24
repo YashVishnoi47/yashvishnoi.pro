@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import React from "react";
+import LogoBox from "@/components/shared/LogoBox";
 
 const ProcessSection = () => {
   const [open, setOpen] = React.useState([]);
@@ -25,7 +26,7 @@ const ProcessSection = () => {
       description:
         "We learn your firm's practice areas, workflow, and call-handling needs.",
       duration: "15–20 min",
-      icon: <PhoneCall size={18} className="text-secondary-text" />,
+      icon: <PhoneCall size={18}  />,
       details: [
         "Understand your practice areas and typical case types",
         "Map your current intake process and pain points",
@@ -39,7 +40,7 @@ const ProcessSection = () => {
       description:
         "We gather your FAQs, intake questions, fee structures, and firm policies to train your AI receptionist.",
       duration: "1–2 days",
-      icon: <BookOpen size={18} className="text-secondary-text" />,
+      icon: <BookOpen size={18}  />,
       details: [
         "Collect your firm's FAQs and common caller questions",
         "Document fee structures and consultation policies",
@@ -53,7 +54,7 @@ const ProcessSection = () => {
       description:
         "Your receptionist is set up with your chosen voice, call routing rules, calendar access, and CRM connection.",
       duration: "3–5 days",
-      icon: <Settings2 size={18} className="text-secondary-text" />,
+      icon: <Settings2 size={18}  />,
       details: [
         "Select and configure your AI receptionist's voice",
         "Set up call routing and emergency escalation paths",
@@ -67,7 +68,7 @@ const ProcessSection = () => {
       description:
         "You test real call scenarios yourself and request any changes before it ever talks to a client.",
       duration: "1–2 days",
-      icon: <ClipboardCheck size={18} className="text-secondary-text" />,
+      icon: <ClipboardCheck size={18}  />,
       details: [
         "Run live test calls covering common scenarios",
         "Review call transcripts and voice quality together",
@@ -81,7 +82,7 @@ const ProcessSection = () => {
       description:
         "Your AI receptionist starts answering calls, qualifying leads, and booking consultations 24/7.",
       duration: "Day 1 of launch",
-      icon: <Rocket size={18} className="text-secondary-text" />,
+      icon: <Rocket size={18}  />,
       details: [
         "Your AI receptionist starts answering all incoming calls",
         "Leads are qualified and routed automatically",
@@ -95,7 +96,7 @@ const ProcessSection = () => {
       description:
         "We monitor call transcripts and refine responses monthly to keep accuracy and conversion high.",
       duration: "Ongoing",
-      icon: <TrendingUp size={18} className="text-secondary-text" />,
+      icon: <TrendingUp size={18}  />,
       details: [
         "Monthly review of call transcripts and outcomes",
         "Refine responses based on real caller questions",
@@ -111,7 +112,6 @@ const ProcessSection = () => {
       id="process"
       className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
     >
-
       <motion.div
         initial={{ y: 22, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -143,9 +143,7 @@ const ProcessSection = () => {
             >
               <div className="w-full flex gap-2 items-center justify-between ">
                 <div className="flex justify-center items-center gap-4">
-                  <div className="p-2 rounded-[4px] flex justify-center items-center border border-line bg-line/20">
-                    {step.icon}
-                  </div>
+                  <LogoBox>{step.icon}</LogoBox>
                   <p className="text-[18px] font-medium">{step.heading}</p>
                 </div>
 
