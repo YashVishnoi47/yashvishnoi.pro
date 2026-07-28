@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div
       id="#home"
-      className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-8 items-start px-4  relative border-x border-line"
+      className="max-w-[800px] w-full h-[450px] flex flex-col justify-center gap-8 items-start px-4 relative border-x border-line"
     >
       <div className="w-full flex flex-col justify-start items-start gap-6 relative z-2 mb-12 mt-8">
         <motion.h1
