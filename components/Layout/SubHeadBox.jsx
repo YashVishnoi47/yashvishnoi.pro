@@ -11,7 +11,7 @@ const SubHeadBox = ({ text }) => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.24, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="w-full max-w-[800px] h-full  flex justify-start items-center 
+        className="w-full max-w-maximum-width h-full  flex justify-start items-center 
        bg-[repeating-linear-gradient(45deg,var(--color-line-lite)_0px,var(--color-line-lite)_1px,transparent_1px,transparent_10px)] px-4 border-x border-line
     "
       >

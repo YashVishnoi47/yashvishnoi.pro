@@ -25,7 +25,7 @@ const FooterCTA = () => {
   ];
 
   return (
-    <div className="max-w-[800px] w-full h-fit flex flex-col justify-start items-start border-x border-line">
+    <div className="max-w-maximum-width w-full h-fit flex flex-col justify-start items-start border-x border-line">
 
       <motion.div
         initial={{ y: 22, opacity: 0 }}

@@ -26,7 +26,7 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
+      className="max-w-maximum-width w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
     >
 
       <motion.div
@@ -38,16 +38,16 @@ const AboutSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full flex flex-col gap-4 justify-start items-start p-4 my-4"
+        className="w-[90%] flex flex-col gap-4 justify-start items-start p-4 my-4"
       >
-        <p className="text-[16px] text-secondary-text text-pretty">
+        <p className="text-[16px] font-medium text-secondary-text text-pretty">
           I'm{" "}
           <span className="text-primary-text font-medium">Yash Vishnoi</span>,
           the developer behind Legal Intake OS™. I'm a full-stack developer
           focused on building practical, production-ready systems — not just
           prototypes.
         </p>
-        <p className="text-[16px] text-secondary-text text-pretty">
+        <p className="text-[16px] font-medium text-secondary-text text-pretty">
           My work centers on{" "}
           <span className="text-primary-text font-medium">
             AI and automation
@@ -56,7 +56,7 @@ const AboutSection = () => {
           custom-coded web applications to AI-powered systems that handle real
           business workflows end-to-end.
         </p>
-        <p className="text-[16px] text-secondary-text text-pretty">
+        <p className="text-[16px] font-medium text-secondary-text text-pretty">
           I built Legal Intake OS™ after seeing how many law firms{" "}
           <span className="text-primary-text font-medium">
             lose qualified leads

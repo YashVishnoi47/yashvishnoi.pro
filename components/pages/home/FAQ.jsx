@@ -45,7 +45,7 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="max-w-[800px] w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
+      className="max-w-maximum-width w-full h-fit flex flex-col justify-start gap-4 items-start border-x border-line"
     >
       <motion.div
         initial={{ y: 22, opacity: 0 }}

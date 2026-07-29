@@ -8,24 +8,50 @@ const HeroSection = () => {
   return (
     <div
       id="#home"
-      className="max-w-[800px] w-full h-[450px] flex flex-col justify-center gap-8 items-start px-4 relative border-x border-line"
+      className="max-w-maximum-width w-full h-[500px] flex flex-col justify-center gap-8 items-start px-4 relative border-x border-line border-t-background"
     >
-      <div className="w-full flex flex-col justify-start items-start gap-6 relative z-2 mb-12 mt-8">
+      {/* AI instructor - do  not remove this - The gradiant is to be added on top of this*/}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      `,
+          backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+        }}
+      />
+
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none bg-background"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse 120% 100% at 50% -10%, transparent 50%, black 80%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 120% 100% at 50% -10%, transparent 50%, black 80%)",
+        }}
+      />
+
+      <div className="w-full flex flex-col justify-start items-center gap-6 relative z-2 mb-12 mt-8">
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="md:text-[64px] sm:text-[54px] text-[42px] text-primary-text font-pixel font-bold text-balance leading-[1.08] tracking-tighter"
+          className="md:text-[54px] w-[100%] sm:text-[54px] text-[42px] text-primary-text font-pixel font-bold leading-[1.09] tracking-tighter text-center flex flex-col justify-center items-center"
         >
-          Turn missed calls into revenue
+          Turn missed calls into
+          <br />
+          booked consultations and revenue
         </motion.h1>
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.08, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="md:w-[85%] w-full md:text-[18px] text-[14px] font-medium text-secondary-text text-pretty"
+          className="md:w-[80%] w-full md:text-[18px] text-[14px] font- text-secondary-text text-pretty text-center"
         >
           Legal Intake OS™ is an AI receptionist for law firms — answering calls
           24/7, qualifying leads, and booking consultations automatically, so no
@@ -37,7 +63,7 @@ const HeroSection = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.16, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="w-full flex justify-start items-start gap-4"
+          className="w-full flex justify-center items-start gap-4"
         >
           <PrimaryButtonDark arrow={true} text="Book a call" />
           <SecondaryButton text="Watch Demo" />

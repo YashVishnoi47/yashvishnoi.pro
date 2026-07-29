@@ -65,7 +65,7 @@ const Footer = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center border border-line h-fit">
-      <div className="max-w-[800px] flex flex-col w-full h-full border-x border-line ">
+      <div className="max-w-maximum-width flex flex-col w-full h-full border-x border-line ">
         <div className="w-full h-fit flex flex-col justify-center items-center p-4 gap-4 border-b border-line">
           <span className="text-[16px] text-secondary-text">Navigate</span>
 
@@ -109,7 +109,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex justify-center items-center border-t border-line">
-        <div className="max-w-[800px] flex w-full h-fit border-x border-line px-4 py-6  flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-t border-t-background">
+        <div className="max-w-maximum-width flex w-full h-fit border-x border-line px-4 py-6  flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-t border-t-background">
           <p className="text-[14px] text-secondary-text">
             Built and designed by{" "}
             <Link

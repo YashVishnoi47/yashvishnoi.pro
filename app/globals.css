@@ -14,7 +14,7 @@
   --line-color-pat-lite: hsl(0, 0%, 98%);
   --bg: #ffffff;
   --button-bg:hsl(0,0%,95%);
-  --max-width: 800px;
+  --maximum-width: 900px;
   --primary-text-color: hsl(0, 0%, 5%);
   --sec-text-color: hsl(0, 0%,40%);
   --background: oklch(1 0 0);
@@ -94,12 +94,13 @@
 
 @theme inline {
   --color-background: var(--bg);
+  --container-maximum-width: var(--maximum-width);
   --color-button-bg: var(--button-bg);
   --color-foreground: var(--foreground);
   --color-line: var(--line-color);
   --color-line-lite: var(--line-color-lite);
   --color-line-pat-lite: var(--line-color-pat-lite);
-  --color-primary-text: var(--primary-text-color);
+  --color-primary-text: var(--primary-text-color);  
   --color-secondary-text: var(--sec-text-color);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);

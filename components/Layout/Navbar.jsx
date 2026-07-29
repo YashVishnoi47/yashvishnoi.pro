@@ -87,7 +87,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line z-5">
-      <div className="w-[800px] border-r border-line h-full flex justify-between items-center px-1">
+      <div className="max-w-maximum-width w-full border-r border-line h-full flex justify-between items-center px-1">
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
           <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:scale-[0.95] transition-all duration-300 ease-out">
             <Link href="/">

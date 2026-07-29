@@ -14,7 +14,7 @@ const UniFooterCTA = () => {
   return (
     <div
       id="tech"
-      className="w-full max-w-[800px] border-t border-x border-line h-fit flex flex-col justify-start gap-4 items-start relative"
+      className="w-full max-w-maximum-width border-t border-x border-line h-fit flex flex-col justify-start gap-4 items-start relative"
     >
       <div
         className="absolute inset-0"

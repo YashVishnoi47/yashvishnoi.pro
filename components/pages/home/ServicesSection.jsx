@@ -73,7 +73,7 @@ const ServicesSection = () => {
   return (
     <div
       id="features"
-      className="max-w-[800px] border-x border-line w-full h-fit flex flex-col justify-start gap-4 items-start"
+      className="max-w-maximum-width border-x border-line w-full h-fit flex flex-col justify-start gap-4 items-start"
     >
       <motion.div
         initial={{ y: 22, opacity: 0 }}

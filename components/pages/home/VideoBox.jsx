@@ -8,7 +8,7 @@ const VideoBox = () => {
   return (
     <div
       id="demo"
-      className="max-w-[800px] border-x border-line w-full aspect-video gap-4 flex flex-col justify-center items-center"
+      className="max-w-maximum-width border-x border-line w-full aspect-video gap-4 flex flex-col justify-center items-center"
     >
       <motion.div
         initial={{ y: 22, opacity: 0 }}
