@@ -10,7 +10,6 @@ const HeroSection = () => {
       id="#home"
       className="max-w-maximum-width w-full h-[500px] flex flex-col justify-center gap-8 items-start px-4 relative border-x border-line border-t-background"
     >
-      {/* AI instructor - do  not remove this - The gradiant is to be added on top of this*/}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{

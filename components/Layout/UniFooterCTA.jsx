@@ -17,13 +17,15 @@ const UniFooterCTA = () => {
       className="w-full max-w-maximum-width border-t border-x border-line h-fit flex flex-col justify-start gap-4 items-start relative"
     >
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage: `
-      linear-gradient(45deg, transparent 49%, var(--line-color-pat-lite) 49%, var(--line-color) 51%, transparent 51%),
-      linear-gradient(-45deg, transparent 49%, var(--line-color-pat-lite) 49%, var(--line-color) 51%, transparent 51%)
-    `,
-          backgroundSize: "40px 40px",
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      `,
+          backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
         }}
       />
 
