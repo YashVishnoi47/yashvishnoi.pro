@@ -8,6 +8,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import LogoBox from "../shared/LogoBox";
+import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
+import LegalIntakeOSiconFull from "@/assets/svg/LegalIntakeOSiconFull";
 
 const Footer = () => {
   const links = [
@@ -87,9 +89,12 @@ const Footer = () => {
     <div className="w-full flex flex-col justify-center border-t border-line items-center h-fit ">
       <div className="max-w-maximum-width justify-between flex w-full border-x border-line px-4 py-12">
         <div className="w-1/2 h-full flex gap-3 flex-col justify-center items-start">
-          <p className="text-[20px] font-bold font-pixel tracking-tighter cursor-default">
-            Legal Intake OS™
-          </p>
+          <div className={"flex gap-2 justify-center items-center"}>
+            <LegalIntakeOSicon width={40} height={40} />
+            <p className="text-[20px] font-bold font-pixel tracking-tighter cursor-default">
+              Legal Intake OS™
+            </p>
+          </div>
           <p className="text-[16px] w-[75%] text-pretty leading-snug text-secondary-text">
             Turn missed calls into booked consultations and revenue
           </p>
@@ -160,7 +165,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center border-t border-line">
+      <div className="w-full max-w-maximum-width flex justify-center items-center border-t border-line">
         <div className="max-w-maximum-width flex w-full h-fit border-x border-line p-4 flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-t border-t-background">
           <p className="text-[14px] text-secondary-text mb12">
             Built and designed by{" "}

@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const PrimaryButtonDark = ({ text, arrow = false, cls }) => {
+const PrimaryButtonDark = ({ text, arrow = false, cls, image = false }) => {
   return (
     <Link
       href="/bookCall"
@@ -19,6 +20,15 @@ const PrimaryButtonDark = ({ text, arrow = false, cls }) => {
         <ArrowRight
           size={16}
           className="text-[hsl(0,0%,90%)] dark:text-[hsl(0,0%,10%)] group-hover:translate-x-1 group-hover:text-[hsl(0,0%,95%)] scale-[0.95] group-hover:scale-[1] transition-all duration-300 ease-out"
+        />
+      )}
+      {image && (
+        <Image
+          src="/yash-vishnoi.jpeg"
+          className="rounded-[4px] w-[24px] h-[24px] object-cover"
+          width={24}
+          height={24}
+          alt="github"
         />
       )}
     </Link>

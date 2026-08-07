@@ -10,6 +10,7 @@ import {
 import { Kbd } from "@/components/ui/kbd";
 import { toast } from "sonner";
 import Image from "next/image";
+import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -48,24 +49,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const copyToClipboard = async (text = "hello@yashvishnoi.pro") => {
-    try {
-      await navigator.clipboard.writeText(text);
-
-      setCopied(true);
-      toast.success("Copied to clipboard!");
-
-      // Reset after 2 seconds
-      setTimeout(() => setCopied(false), 2000);
-
-      return true;
-    } catch (error) {
-      console.error("Failed to copy:", error);
-      toast.error("Failed to copy.");
-      return false;
-    }
-  };
-
   const links = [
     {
       name: "Home",
@@ -89,17 +72,12 @@ const Navbar = () => {
     <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line z-5">
       <div className="max-w-maximum-width w-full border-r border-line h-full flex justify-between items-center px-1">
         <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
-          <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:scale-[0.95] transition-all duration-300 ease-out">
-            <Link href="/">
-              <Image
-                src={"/yash-vishnoi.jpeg"}
-                width={48}
-                height={48}
-                objectFit="cover"
-                className="rounded-full w-full h-full"
-                unoptimized
-                alt="logo"
-              />
+          <div className="w-fit h-11 rounded-full overflo-hidden cursor-pointer hoverscale-[0.95] transition-all duration-300 ease-out flex justify-center  items-center">
+            <Link className={"flex gap-3 justify-center  items-center"} href="/">
+              <LegalIntakeOSicon height={44} width={44} />
+              <p className="text-[18px] font-bold font-pixel tracking-tighter">
+                Legal Intake OS™
+              </p>
             </Link>
           </div>
         </div>
@@ -126,80 +104,43 @@ const Navbar = () => {
           </div>
 
           <div className="flex justify-center items-center gap-1">
-            {/* Github */}
-            <Tooltip>
-              <TooltipTrigger delay={"100"}>
-                {" "}
-                <Link
-                  className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] "
-                  target="_blank"
-                  href="https://github.com/YashVishnoi47/yashvishnoi.pro"
-                >
-                  <GithubSVG />
-                  <span className="ml2 text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out">
-                    Github
-                  </span>
-                </Link>
-              </TooltipTrigger>
-
-              <TooltipContent>
-                <p>Visit Github</p>
-              </TooltipContent>
-            </Tooltip>
-            <div className="w-[0.5px] h-6 bg-line" />
-            {/* Email */}
-            <Tooltip>
-              <TooltipTrigger delay={"100"}>
-                {" "}
-                <div
-                  className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group 
-                transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] cursor-pointer"
-                  onClick={() => copyToClipboard()}
-                >
-                  {copied ? (
-                    <Check
-                      size={16}
-                      className="text-secondary-text group-hover:text-primary-text"
-                    />
-                  ) : (
-                    <Mail
-                      size={18}
-                      className="text-secondary-text group-hover:text-primary-text"
-                    />
-                  )}
-                  <span
-                    className={`text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out`}
-                  >
-                    {copied ? "Copied" : "Email"}
-                  </span>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>
-                  {/* Click to Copy <Kbd>hello@yashvishnoi.pro</Kbd> */}
-                  hello@yashvishnoi.pro
-                </p>
-              </TooltipContent>
-            </Tooltip>
+            {/* Talk to Yash */}
+            <Link
+              className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] "
+              target="_blank"
+              href="/bookCall"
+            >
+              <Image
+                src="/yash-vishnoi.jpeg"
+                className="rounded-full w-[24px] h-[24px] object-cover"
+                width={24}
+                height={24}
+                alt="github"
+              />
+              {/* <GithubSVG /> */}
+              <span className="ml2 text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out">
+                Talk to Yash
+              </span>
+            </Link>
           </div>
 
           <div className="flex justify-center items-center gap-1 px-1 border-l border-line">
             <Tooltip>
-              <TooltipTrigger delay={"100"}>
+              <TooltipTrigger delay={"200"}>
                 {" "}
                 <div
-                  className="flex justify-center items-center px-2 py-1 cursor-pointer border-line"
+                  className="flex justify-center items-center hover:bg-line/10 px-2 py-1  cursor-pointer border-line transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] group"
                   onClick={changeTheme}
                 >
                   {theme === "light" ? (
                     <Moon
                       size={16}
-                      className="text-secondary-text hover:text-primary-text"
+                      className="text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out"
                     />
                   ) : (
                     <Sun
                       size={16}
-                      className="text-secondary-text hover:text-primary-text"
+                      className="text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out"
                     />
                   )}
                 </div>

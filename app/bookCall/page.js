@@ -12,7 +12,7 @@ const page = () => {
   }, []);
 
   return (
-    <div className="max-w-[800px] gap-12 w-full min-h-[100vh] border dark:border-t-black border-t-white border-line flex flex-col justify-center items-center border-b-background">
+    <div className="max-w-maximum-width gap-12 w-full min-h-[100vh] border dark:border-t-black border-t-white border-line flex flex-col justify-center items-center border-b-background">
       <Cal
         namespace="talkwithyash"
         calLink="yash-vishnoi-ou1y8q/talkwithyash"

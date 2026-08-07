@@ -41,6 +41,7 @@ const HeroSection = () => {
           viewport={{ once: true }}
           className="md:text-[54px] w-[100%] sm:text-[54px] text-[42px] text-primary-text font-pixel font-bold leading-[1.09] tracking-tighter text-center flex flex-col justify-center items-center"
         >
+          {/* <h1 className={"text-[16px] tracking-tight mb-4"}>Legal Intake OS™</h1> */}
           Turn missed calls into
           <br />
           booked consultations and revenue
@@ -64,7 +65,7 @@ const HeroSection = () => {
           viewport={{ once: true }}
           className="w-full flex justify-center items-start gap-4"
         >
-          <PrimaryButtonDark arrow={true} text="Book a call" />
+          <PrimaryButtonDark arrow={true} text="Talk to Yash" />
           <SecondaryButton text="Watch Demo" />
         </motion.div>
       </div>
