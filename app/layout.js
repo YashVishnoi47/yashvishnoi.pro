@@ -43,6 +43,9 @@ export const metadata = {
     "Legal Intake OS™ is an AI receptionist built for law firms — answering calls 24/7, qualifying leads, booking consultations, and syncing to your CRM automatically. Built by Yash Vishnoi.",
 
   keywords: [
+    "Legal Intake OS™",
+    "Legal Intake OS",
+    "Legal Intake OS - AI receptionist for law firms",
     "AI receptionist for law firms",
     "AI receptionist",
     "AI calling automation",
