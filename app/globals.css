@@ -12,6 +12,7 @@
   --line-color: hsl(0, 0%, 80%);
   --line-color-lite: hsl(0, 0%, 90%);
   --line-color-pat-lite: hsl(0, 0%, 98%);
+  --accent-color: #6C4CF1;
   --bg: #ffffff;
   --button-bg:hsl(0,0%,95%);
   --maximum-width: 900px;
@@ -55,6 +56,7 @@
   --bg: #000000;
   --button-bg:hsl(0,0%,2%);
   --line-color: hsl(0, 0%, 10%);
+  --accent-color: #6C4CF1;
   --line-color-lite: hsl(0, 0%, 10%);
   --line-color-pat-lite: hsl(0, 0%, 5%);
   --primary-text-color: hsl(0, 0%, 95%);
@@ -96,6 +98,7 @@
   --color-background: var(--bg);
   --container-maximum-width: var(--maximum-width);
   --color-button-bg: var(--button-bg);
+  --color-accent-color:var(--accent-color);
   --color-foreground: var(--foreground);
   --color-line: var(--line-color);
   --color-line-lite: var(--line-color-lite);

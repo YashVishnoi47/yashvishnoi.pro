@@ -17,26 +17,54 @@ const UniFooterCTA = () => {
       className="w-full max-w-maximum-width border-t border-x border-line h-fit flex flex-col justify-start gap-4 items-start relative"
     >
       <div
-        className="absolute inset-0 z-0 pointer-events-none"
+        className="
+    absolute inset-0 z-0 pointer-events-none
+    [--grid-line:rgba(75,85,99,0.08)]
+    [--grid-dot:rgba(55,65,81,0.12)]
+    dark:[--grid-line:hsl(0,0%,10%)]
+    dark:[--grid-dot:hsl(0,0%,10%)]
+  "
         style={{
           backgroundImage: `
-        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
-        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
-      `,
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 19px,
+        var(--grid-line) 19px,
+        var(--grid-line) 20px,
+        transparent 20px,
+        transparent 39px,
+        var(--grid-line) 39px,
+        var(--grid-line) 40px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 19px,
+        var(--grid-line) 19px,
+        var(--grid-line) 20px,
+        transparent 20px,
+        transparent 39px,
+        var(--grid-line) 39px,
+        var(--grid-line) 40px
+      ),
+      radial-gradient(
+        circle at 20px 20px,
+        var(--grid-dot) 2px,
+        transparent 2px
+      ),
+      radial-gradient(
+        circle at 40px 40px,
+        var(--grid-dot) 2px,
+        transparent 2px
+      )
+    `,
           backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
         }}
       />
 
       <div className="w-full h-100 flex flex-col gap-8 justify-center items-center relative z-1">
-        <div
-          className="
-    absolute inset-0 -z-10
-    bg-[radial-gradient(circle_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_18%,rgba(255,255,255,0.75)_35%,rgba(255,255,255,0.45)_55%,rgba(255,255,255,0.15)_75%,rgba(255,255,255,0)_100%)]
-    dark:bg-[radial-gradient(circle_at_center,rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_18%,rgba(0,0,0,0.75)_35%,rgba(0,0,0,0.45)_55%,rgba(0,0,0,0.15)_75%,rgba(0,0,0,0)_100%)]
-  "
-        />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_18%,rgba(255,255,255,0.75)_35%,rgba(255,255,255,0.45)_55%,rgba(255,255,255,0.15)_75%,rgba(255,255,255,0)_100%)] dark:bg-[radial-gradient(circle_at_center,rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_18%,rgba(0,0,0,0.75)_35%,rgba(0,0,0,0.45)_55%,rgba(0,0,0,0.15)_75%,rgba(0,0,0,0)_100%)]" />
 
         <div className="w-full flex justify-center items-center flex-col">
           <p className="w-[70%] flex flex-wrap justify-center items-center text-center md:text-[42px] text-[28px] text-primary-text font-bold text-balance leading-tight">
@@ -70,7 +98,7 @@ const UniFooterCTA = () => {
             >
               Voicemail.{"\u00A0"}
             </motion.span>
-            <span className="text-white flex flex-wrap justify-center items-center w-fit bg-black dark:text-black dark:bg-white group relative z-2">
+            <span className="text-white flex flex-wrap justify-center items-center w-fit bg-accent-color dark:text-black dark:bg-white group relative z-2">
               {text3.split(" ").map((word, idx) => (
                 <motion.span
                   initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
@@ -93,7 +121,8 @@ const UniFooterCTA = () => {
         </div>
 
         <div className="w-full flex justify-center items-start gap-4">
-          <PrimaryButtonDark arrow={true} text="Book a call" />
+          {/* <PrimaryButtonDark arrow={true} text="Book a call" /> */}
+          <PrimaryButtonDark image={true} text="Talk with Yash" />
           <SecondaryButton text="Watch Demo" />
         </div>
       </div>

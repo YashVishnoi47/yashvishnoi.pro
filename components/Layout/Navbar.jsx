@@ -11,6 +11,7 @@ import { Kbd } from "@/components/ui/kbd";
 import { toast } from "sonner";
 import Image from "next/image";
 import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
+import PrimaryButtonDark from "../ui/PrimaryButtonDark";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -69,11 +70,14 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-15 flex sticky top-0 bg-background justify-center items-center border-b border-line z-5">
-      <div className="max-w-maximum-width w-full border-r border-line h-full flex justify-between items-center px-1">
-        <div className="md:w-[30%] w-[50%] flex gap-4 justify-start items-center">
+    <div className="w-full h-15 flex sticky top-0 bg-background/90 backdrop-blur-xl  justify-center items-center border-b border-line z-5">
+      <div className="max-w-maximum-width w-full border-r border-line h-full flex justify-between items-center px-2">
+        <div className="md:w-[33%] w-[50%] flex gap-4 justify-start items-center">
           <div className="w-fit h-11 rounded-full overflo-hidden cursor-pointer hoverscale-[0.95] transition-all duration-300 ease-out flex justify-center  items-center">
-            <Link className={"flex gap-3 justify-center  items-center"} href="/">
+            <Link
+              className={"flex gap-3 justify-center  items-center"}
+              href="/"
+            >
               <LegalIntakeOSicon height={44} width={44} />
               <p className="text-[18px] font-bold font-pixel tracking-tighter">
                 Legal Intake OS™
@@ -82,9 +86,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="md:w-[70%] w-[50%] h-full gap-2 flex justify-end items-center">
+        <div className="md:w-[33%] w-[50%] h-full gap-2 flex justify-center items-center">
           {/* NavLinks */}
-          <div className="md:flex hidden gap-4 justify-center border-r border-line pr-4">
+          <div className="md:flex hidden gap-4 justify-center border- border-line pr-4">
             {links.map((item, idx) => (
               <Link
                 className="text-[14px] font-medium text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out border--[1.5px] dark:border-black border-white hover:border-primary-text relative"
@@ -102,10 +106,12 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+        </div>
 
+        <div className="md:w-[33%] w-[50%] h-full gap-2 flex justify-end items-center">
           <div className="flex justify-center items-center gap-1">
             {/* Talk to Yash */}
-            <Link
+            {/* <Link
               className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] "
               target="_blank"
               href="/bookCall"
@@ -117,14 +123,15 @@ const Navbar = () => {
                 height={24}
                 alt="github"
               />
-              {/* <GithubSVG /> */}
               <span className="ml2 text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out">
                 Talk to Yash
               </span>
-            </Link>
+            </Link> */}
+
+            <PrimaryButtonDark image={false} text="Talk with Yash" />
           </div>
 
-          <div className="flex justify-center items-center gap-1 px-1 border-l border-line">
+          {/* <div className="flex justify-center items-center gap-1 px-1 border-l border-line">
             <Tooltip>
               <TooltipTrigger delay={"200"}>
                 {" "}
@@ -151,7 +158,7 @@ const Navbar = () => {
                 </p>
               </TooltipContent>
             </Tooltip>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

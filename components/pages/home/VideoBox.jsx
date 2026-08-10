@@ -1,5 +1,4 @@
 "use client";
-import SubHeadBox from "@/components/Layout/SubHeadBox";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -15,8 +14,17 @@ const VideoBox = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.32, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="w-[95%] h-[95%] rounded-xl bg-line/20 border-black my-4"
-      />
+        className="w-[95%] h-[95%] rounded-xl bg-line/20 border border-black/50 my-4 overflow-hidden"
+      >
+        <Image
+          src="/video Thumbanail.png"
+          width={1000}
+          height={1000}
+          className={"w-full h-full "}
+          unoptimized
+          alt="demo"
+        />
+      </motion.div>
     </div>
   );
 };

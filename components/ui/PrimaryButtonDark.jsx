@@ -9,11 +9,14 @@ const PrimaryButtonDark = ({ text, arrow = false, cls, image = false }) => {
     <Link
       href="/bookCall"
       className={cn(
-        "px-4 py-1.5 bg-[hsl(0,0%,2%)] dark:bg-[hsl(0,0%,98%)] dark:hover:bg-[hsl(0,0%,90%)] hover:bg-[hsl(0,0%,10%)] cursor-pointer rounded-[8px] transition-all duration-300 ease-out flex justify-center items-center gap-1.5 group active:scale-[0.97] hover:shadow-[-3px_-3px_5px_0px_rgba(244,244,244,0.2)_inset] dark:hover:shadow-[-3px_-3px_5px_0px_rgba(0,0,0,0.2)_inset] hover:scale-[1.01]",
+        "bg-accent-color hover:bg-accent-color/95 cursor-pointer rounded-[8px] transition-all duration-300 ease-out flex justify-center items-center gap-2 group active:scale-[0.97] border-accent-color border",
+        image && "px-1.5 py-1.5 ",
+        arrow && "px-3 py-1.5",
+        !arrow && !image && "px-4 py-1.5",
         cls,
       )}
     >
-      <span className="text-[hsl(0,0%,95%)] dark:text-[hsl(0,0%,5%)]">
+      <span className={cn("text-[hsl(0,0%,95%)] dark:text-[hsl(0,0%,5%)]", image && "ml-1")}>
         {text || "Click me"}
       </span>
       {arrow && (
@@ -25,7 +28,8 @@ const PrimaryButtonDark = ({ text, arrow = false, cls, image = false }) => {
       {image && (
         <Image
           src="/yash-vishnoi.jpeg"
-          className="rounded-[4px] w-[24px] h-[24px] object-cover"
+          unoptimized
+          className="rounded-[4px] size-6 object-cover border border-white"
           width={24}
           height={24}
           alt="github"
