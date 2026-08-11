@@ -1,54 +1,13 @@
 "use client";
-import { Check, Mail, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Kbd } from "@/components/ui/kbd";
-import { toast } from "sonner";
-import Image from "next/image";
 import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
 import PrimaryButtonDark from "../ui/PrimaryButtonDark";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
-  const [copied, setCopied] = useState(false);
+  const [hovered, setHovered] = useState(null);
 
-  const changeTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-
-    setTheme(newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-    localStorage.setItem("theme", newTheme);
-  };
-
-  useEffect(() => {
-    const dtheme = localStorage.getItem("theme");
-
-    if (dtheme) {
-      setTheme(dtheme);
-      document.documentElement.classList.toggle("dark", dtheme === "dark");
-    } else {
-      localStorage.setItem("theme", theme);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key.toLowerCase() === "d") {
-        changeTheme();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
 
   const links = [
     {
@@ -93,16 +52,27 @@ const Navbar = () => {
               <Link
                 className="text-[14px] font-medium text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out border--[1.5px] dark:border-black border-white hover:border-primary-text relative"
                 href={item.href}
+                onMouseEnter={() => {
+                  setHovered(idx);
+                }}
+                onMouseLeave={() => {
+                  setHovered(null);
+                }}
                 key={idx}
               >
                 {item.name}
 
-                {/* {hovered === idx && (
+                <AnimatePresence>
+                  {hovered === idx && (
                     <motion.span
-                      layoutId="hovernav"
-                      className="h-[2px] w-full bg-black absolute bottom-0 z-2 left-1/2 -translate-x-1/2"
+                      initial={{ width: 0, opacity: 0 }}
+                      animate={{ width: "100%", opacity: 1 }}
+                      exit={{ width: 0, opacity: 0 }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                      className="h-[1.3px] w-full bg-black absolute bottom-0 z-2 left-1/2 -translate-x-1/2"
                     />
-                  )} */}
+                  )}
+                </AnimatePresence>
               </Link>
             ))}
           </div>

@@ -1,17 +1,14 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import LogoBox from "../shared/LogoBox";
 import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
-import LegalIntakeOSiconFull from "@/assets/svg/LegalIntakeOSiconFull";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Footer = () => {
+  const [hovered, setHovered] = useState(null);
+
   const links = [
     {
       name: "Home",
@@ -42,12 +39,13 @@ const Footer = () => {
     //   link: "/#faq",
     // },
   ];
+
   const socials = [
     {
       icons: (
         <FaXTwitter
-          size={16}
-          className="text-secondary-text hover:text-primary-text"
+          size={18}
+          className="text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out"
         />
       ),
       link: "https://x.com/Yash_Vishnoi7",
@@ -56,8 +54,8 @@ const Footer = () => {
     {
       icons: (
         <FaLinkedin
-          size={16}
-          className="text-secondary-text hover:text-primary-text"
+          size={18}
+          className="text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out"
         />
       ),
       link: "https://www.linkedin.com/in/yash-vishnoi-654318384/",
@@ -66,8 +64,8 @@ const Footer = () => {
     {
       icons: (
         <FaGithub
-          size={16}
-          className="text-secondary-text hover:text-primary-text"
+          size={18}
+          className="text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out"
         />
       ),
       link: "https://github.com/YashVishnoi47/yashvishnoi.pro",
@@ -76,8 +74,8 @@ const Footer = () => {
     {
       icons: (
         <IoMdMail
-          size={16}
-          className="text-secondary-text hover:text-primary-text"
+          size={18}
+          className="text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out"
         />
       ),
       link: "mailto:hello@yashvishnoi.pro",
@@ -116,11 +114,29 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               {links.map((item, idx) => (
                 <Link
-                  key={idx}
+                  className="text-[14px] font-medium text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out border--[1.5px] dark:border-black border-white hover:border-primary-text relative w-fit"
                   href={item.link}
-                  className="text-[14px] text-secondary-text hover:text-primary-text"
+                  onMouseEnter={() => {
+                    setHovered(idx);
+                  }}
+                  onMouseLeave={() => {
+                    setHovered(null);
+                  }}
+                  key={idx}
                 >
                   {item.name}
+
+                  <AnimatePresence>
+                    {hovered === idx && (
+                      <motion.span
+                        initial={{ width: 0, opacity: 0 }}
+                        animate={{ width: "100%", opacity: 1 }}
+                        exit={{ width: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        className="h-[1.3px] w-full bg-black absolute bottom-0 z-2 left-0"
+                      />
+                    )}
+                  </AnimatePresence>
                 </Link>
               ))}
             </div>
@@ -131,37 +147,9 @@ const Footer = () => {
               Socials
             </p>
             <div className="flex flex-col gap-3">
-              {socials.map((item, idx) => {
-                if (item.name !== "Mail")
-                  return (
-                    <Link
-                      key={idx}
-                      href={item.link}
-                      className="text-[14px] text-secondary-text hover:text-primary-text"
-                    >
-                      {item.name}
-                    </Link>
-                  );
-              })}
+              <SocialsLinks socials={socials} />
             </div>
           </div>
-
-          {/* <div className="flex flex-col gap-3 justify-start items-start">
-            <p className="text-[12px] uppercase font-medium text-[hsl(0,0%,60%)]">
-              Explore
-            </p>
-            <div className="flex flex-col gap-3">
-              {links.map((item, idx) => (
-                <Link
-                  key={idx}
-                  href={item.link}
-                  className="text-[14px] text-secondary-text hover:text-primary-text"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
 
@@ -190,6 +178,41 @@ const Footer = () => {
       </div>
     </div>
   );
+};
+
+const SocialsLinks = ({ socials }) => {
+  const [hovered, setHovered] = useState(null);
+
+  return socials.map((item, idx) => {
+    if (item.name !== "Mail")
+      return (
+        <Link
+          className="text-[14px] font-medium text-secondary-text hover:text-primary-text transition-all duration-200 ease-in-out border--[1.5px] dark:border-black border-white hover:border-primary-text relative w-fit"
+          href={item.link}
+          onMouseEnter={() => {
+            setHovered(idx);
+          }}
+          onMouseLeave={() => {
+            setHovered(null);
+          }}
+          key={idx}
+        >
+          {item.name}
+
+          <AnimatePresence>
+            {hovered === idx && (
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: "100%", opacity: 1 }}
+                exit={{ width: 0, opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="h-[1.3px] w-full bg-black absolute bottom-0 z-2 left-0"
+              />
+            )}
+          </AnimatePresence>
+        </Link>
+      );
+  });
 };
 
 export default Footer;
