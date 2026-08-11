@@ -5,6 +5,8 @@ import PrimaryButton from "../ui/PrimaryButton";
 import SecondaryButton from "../ui/SecondaryButton";
 import PrimaryButtonDark from "../ui/PrimaryButtonDark";
 import { motion } from "framer-motion";
+import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
+import Link from "next/link";
 
 const UniFooterCTA = () => {
   const text = "Stop Losing Clients to";
@@ -121,8 +123,9 @@ const UniFooterCTA = () => {
         </div>
 
         <div className="w-full flex justify-center items-start gap-4">
-          {/* <PrimaryButtonDark arrow={true} text="Book a call" /> */}
-          <PrimaryButtonDark image={true} text="Talk with Yash" />
+          <Link href="/bookCall">
+            <PrimaryButtonV2 className={"w-[145px]"} text="Book a call" />
+          </Link>
           <SecondaryButton text="Watch Demo" />
         </div>
       </div>

@@ -3,6 +3,8 @@ import React from "react";
 import SecondaryButton from "@/components/ui/SecondaryButton";
 import PrimaryButtonDark from "@/components/ui/PrimaryButtonDark";
 import { motion } from "framer-motion";
+import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -99,7 +101,9 @@ const HeroSection = () => {
           viewport={{ once: true }}
           className="w-full flex justify-center items-start gap-4"
         >
-          <PrimaryButtonDark image={true} text="Talk with Yash" />
+          <Link href="/bookCall">
+            <PrimaryButtonV2 text="Talk with Yash" />
+          </Link>
           <SecondaryButton text="Watch Demo" />
         </motion.div>
       </div>

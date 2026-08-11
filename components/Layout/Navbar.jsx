@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
 import PrimaryButtonDark from "../ui/PrimaryButtonDark";
 import { AnimatePresence, motion } from "framer-motion";
+import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
 
 const Navbar = () => {
   const [hovered, setHovered] = useState(null);
-
 
   const links = [
     {
@@ -80,25 +80,9 @@ const Navbar = () => {
 
         <div className="md:w-[33%] w-[50%] h-full gap-2 flex justify-end items-center">
           <div className="flex justify-center items-center gap-1">
-            {/* Talk to Yash */}
-            {/* <Link
-              className="px-2 py-1 hover:bg-line/10 flex gap-2 justify-center items-center group transition-all duration-200 ease-in-out rounded-[4px] active:scale-[0.98] "
-              target="_blank"
-              href="/bookCall"
-            >
-              <Image
-                src="/yash-vishnoi.jpeg"
-                className="rounded-full w-[24px] h-[24px] object-cover"
-                width={24}
-                height={24}
-                alt="github"
-              />
-              <span className="ml2 text-[14px] font-medium text-secondary-text group-hover:text-primary-text transition-all duration-200 ease-in-out">
-                Talk to Yash
-              </span>
-            </Link> */}
-
-            <PrimaryButtonDark image={false} text="Talk with Yash" />
+            <Link href="/bookCall">
+              <PrimaryButtonV2 text="Talk with Yash" />
+            </Link>
           </div>
 
           {/* <div className="flex justify-center items-center gap-1 px-1 border-l border-line">
