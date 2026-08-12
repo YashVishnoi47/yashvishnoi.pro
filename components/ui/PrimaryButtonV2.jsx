@@ -9,12 +9,12 @@ const PrimaryButtonV2 = ({ text, className }) => {
   const MotionImage = motion(Image);
   const [hover, setHover] = useState(false);
 
-  const easing = [0.08, 0.82, 0.17, 1];
+  const easing = [0.19, 1, 0.22, 1];
 
   return (
     <motion.div
       className={cn(
-        "w-[160px] h-[45px] p-1 rounded-[8px]",
+        "w-[165px] h-[45px] p-1 rounded-[8px]",
         "flex justify-between items-center relative overflow-hidden",
         "bg-primary text-white p",
         "cursor-pointer",
@@ -30,7 +30,7 @@ const PrimaryButtonV2 = ({ text, className }) => {
           "flex justify-center items-center overflow-hidden relative z-2 bg-accent-color ",
         )}
         style={{ order: hover ? 2 : 1 }}
-        transition={{ duration: 0.7, ease: easing }}
+        transition={{ duration: 0.9, ease: easing }}
         initial={{ rotate: 0 }}
         animate={{ rotate: hover ? 360 : 0 }}
         layout
@@ -64,7 +64,7 @@ const PrimaryButtonV2 = ({ text, className }) => {
       <motion.span
         style={{ order: hover ? 1 : 2 }}
         layout
-        transition={{ duration: 0.7, ease: easing }}
+        transition={{ duration: 0.9, ease: easing }}
         className={cn("text-[16px] relative z-1", "mr-2")}
       >
         {text || "Click me"}
@@ -73,7 +73,7 @@ const PrimaryButtonV2 = ({ text, className }) => {
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: hover ? "100%" : 0 }}
-        transition={{ duration: 0.7, ease: easing }}
+        transition={{ duration: 0.9, ease: easing }}
         className="absolute inset-0 z-0 pointer-events-none bg-white/10 h-full"
       />
     </motion.div>

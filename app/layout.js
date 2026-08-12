@@ -135,7 +135,7 @@ export default function RootLayout({ children }) {
       <head>
         <StructuredData />
       </head>
-      <body className="min-h-fit max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto bg-background dark:selection:bg-white dark:selection:text-black selection:bg-black selection:text-white">
+      <body className="min-h-fit max-w-[1600px] w-full flex flex-col justify-center items-center font-roboto bg-background selection:bg-accent-color selection:text-white">
         <Toaster />
         <Navbar />
         <TooltipProvider>{children}</TooltipProvider>

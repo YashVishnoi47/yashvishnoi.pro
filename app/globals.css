@@ -9,7 +9,7 @@
 }
 
 :root {
-  --line-color: hsl(0, 0%, 80%);
+  --line-color: hsl(0, 0%, 90%);
   --line-color-lite: hsl(0, 0%, 90%);
   --line-color-pat-lite: hsl(0, 0%, 98%);
   --accent-color: #6C4CF1;
