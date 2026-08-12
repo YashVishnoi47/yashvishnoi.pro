@@ -20,52 +20,52 @@ const ServicesSection = () => {
   const services = [
     {
       name: "24/7 Live Answering",
-      desc: "No missed calls, no voicemail, no sick days.",
+      desc: "Every call gets answered day or night — no voicemail, no missed leads, no sick days.",
       logo: <PhoneCall className="size-5 " />,
     },
     {
       name: "Natural, Human-Like Voice",
-      desc: "You choose the voice that fits your firm's tone.",
+      desc: "Callers talk to a natural-sounding AI voice you pick to match your firm's tone.",
       logo: <AudioLines className="size-5 " />,
     },
     {
       name: "Custom Knowledge Base",
-      desc: "Trained on information your firm provides, to answer real questions accurately.",
+      desc: "Trained on your firm's own information, so it answers real questions accurately.",
       logo: <BrainCog className="size-5 " />,
     },
     {
       name: "Lead Qualification",
-      desc: "Every caller is asked the right questions before being passed along.",
+      desc: "Every caller is asked the right questions upfront before ever reaching your team.",
       logo: <ListChecks className="size-5 " />,
     },
     {
       name: "Emergency Detection & Routing",
-      desc: "Urgent matters reach a human immediately.",
+      desc: "Urgent, time-sensitive matters are flagged and routed to a human immediately.",
       logo: <Siren className="size-5 " />,
     },
     {
       name: "Qualified-Lead Transfer",
-      desc: "Only real prospects reach your team — your attorneys' time stays protected.",
+      desc: "Only real, qualified prospects get passed through — your attorneys' time stays protected.",
       logo: <UserCheck className="size-5 " />,
     },
     {
       name: "Calendar-Based Booking",
-      desc: "Consultations are booked directly against attorney availability.",
+      desc: "Consultations are booked straight into your calendar, based on real attorney availability.",
       logo: <CalendarCheck className="size-5 " />,
     },
     {
       name: "CRM Synchronization",
-      desc: "Every lead is synced to your firm's CRM.",
+      desc: "Every lead is automatically synced to your firm's CRM — no manual data entry needed.",
       logo: <RefreshCw className="size-5 " />,
     },
     {
       name: "Email Follow-Up",
-      desc: "Every lead is sent a follow-up email.",
+      desc: "Every lead gets an automatic follow-up email, so no prospect is left waiting.",
       logo: <MailCheck className="size-5" />,
     },
     {
       name: "Email Reminders",
-      desc: "Every lead is sent a follow-up email.",
+      desc: "Upcoming consultations trigger automatic reminders, keeping no-shows to a minimum.",
       logo: <MailCheck className="size-5" />,
     },
   ];
@@ -84,25 +84,27 @@ const ServicesSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full h-fit border-line border-b flex justify-center items-center flex-wrap my-4"
+        className="w-full h-fit  flex justify-center items-center flex-wrap"
       >
         {services.map((item, idx) => (
           <div
-            key={idx}
             className={cn(
-              "h-14 md:w-[50%] w-full flex justify-start items-center gap-4 p-4 border-y border-line cursor-pointer bg-background hover:bg-black/3 dark:hover:bg-white/5 group transition-all duration-300 ease-in-out border-r border-b-background",
-              idx % 2 === 1 && "border-r-0",
+              "h-40 py-4 md:w-1/2 w-full border border-line p-4 flex flex-col gap-4 hover:bg-line/10 transition-all duration-200 ease-in-out",
+              idx % 2 === 1 ? "border-r-0 border-l-0" : "border-l-0",
+              idx === 8 && "border-b-0",
+              idx === 9 && "border-b-0",
             )}
+            key={idx}
           >
-            {/* <div className="p-2 border border-line bg-line/15 rounded-sm">
-              {item.logo}
-            </div> */}
-
             <LogoBox>{item.logo}</LogoBox>
-
-            <p className="text-[15px] text-primary-text ">
-              {item.name || "Some text here"}
-            </p>
+            <div className="flex flex-col gap-2">
+              <p className="text-[18px] font-bold text-primary-text">
+                {item.name}
+              </p>
+              <p className="text-[14px] tracking-wide text-pretty text-secondary-text">
+                {item.desc}
+              </p>
+            </div>
           </div>
         ))}
       </motion.div>

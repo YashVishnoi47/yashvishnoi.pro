@@ -56,7 +56,7 @@ const FAQ = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full h-fit flex justify-center items-start flex-wrap my-4 border-t border-line"
+        className="w-full h-fit flex justify-center items-start flex-wrap"
       >
         {FAQS.map((item, idx) => (
           <div
@@ -108,10 +108,10 @@ const FAQ = () => {
         >
           <span className="text-[14px] text-secondary-text">
             Can't find the answer you're looking for?
-          </span>
+          </span>{" "}
           <Link
             href="/bookCall"
-            className="text-[14px] text-primary-text font-medium hover:underline"
+            className="text-[14px] text-accent-color font-medium underline decoration-black"
           >
             Talk to Yash
           </Link>

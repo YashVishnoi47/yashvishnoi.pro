@@ -1,10 +1,9 @@
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Layout/Navbar";
-import { GeistPixelSquare } from "geist/font/pixel";
+import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "sonner";
+import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import UniFooterCTA from "@/components/Layout/UniFooterCTA";
 import StructuredData from "@/structured-data";

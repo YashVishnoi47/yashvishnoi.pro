@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import SecondaryButton from "@/components/ui/SecondaryButton";
-import PrimaryButtonDark from "@/components/ui/PrimaryButtonDark";
-import { motion } from "framer-motion";
 import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (

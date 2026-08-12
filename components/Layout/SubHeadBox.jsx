@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 const SubHeadBox = ({ text }) => {
   return (
-    <div className="w-full flex justify-center  items-center h-15 border-b border-line border-t">
+    <div className="w-full flex justify-center  items-center h-15 border-b border-line border-">
+      
       <motion.div
         className="w-full max-w-maximum-width h-full  flex justify-start items-center relative
         px-4 border-x border-line overflow-hidden

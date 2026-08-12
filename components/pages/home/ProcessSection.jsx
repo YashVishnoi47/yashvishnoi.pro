@@ -121,7 +121,7 @@ const ProcessSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full flex flex-col justify-start items-start my-4"
+        className="w-full flex flex-col justify-start items-start"
       >
         {steps.map((step, idx) => (
           <div

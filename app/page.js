@@ -6,6 +6,7 @@ import HeroSection from "@/components/pages/home/HeroSection";
 import ProcessSection from "@/components/pages/home/ProcessSection";
 import ServicesSection from "@/components/pages/home/ServicesSection";
 import VideoBox from "@/components/pages/home/VideoBox";
+import BlankSpace from "@/components/ui/BlankSpace";
 
 export default function Home() {
   return (
@@ -19,31 +20,39 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <div className="w-full flex flex-col justify-center items-center gap-">
+      <div className="w-full flex flex-col justify-center items-center">
+        <BlankSpace />
         <SubHeadBox text={`Your 24/7 Intake System`} />
         <ServicesSection />
       </div>
 
       {/* Process */}
       <div className="w-full flex flex-col justify-center items-center gap-">
+        <BlankSpace />
+
         <SubHeadBox text={`Our Process`} />
         <ProcessSection />
       </div>
 
       {/* About */}
       <div className="w-full flex flex-col justify-center items-center gap-">
+        <BlankSpace />
+
         <SubHeadBox text={`About me`} />
         <AboutSection />
       </div>
 
       {/* FAQ */}
       <div className="w-full flex flex-col justify-center items-center gap-">
+        <BlankSpace />
+
         <SubHeadBox text={`FAQ's`} />
         <FAQ />
       </div>
 
       {/* Bonus Elements */}
       <div className="w-full flex flex-col justify-center items-center gap-">
+        <BlankSpace />
         <SubHeadBox text={`Bonus Elements`} />
         <FooterCTA /> {/* Bonus Elements */}
       </div>
