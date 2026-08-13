@@ -50,7 +50,7 @@ const FAQ = () => {
     },
     {
       question: "Does it call leads back automatically?",
-      ans: "Follow-up currently happens through automated email, not outbound calling.",
+      ans: "Follow-up can happen through automated email, or your firm's preferred method.",
       icon: <Mail className={IconStyles} />,
     },
     {
