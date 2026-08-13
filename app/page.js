@@ -46,7 +46,7 @@ export default function Home() {
       <div className="w-full flex flex-col justify-center items-center gap-">
         <BlankSpace />
 
-        <SubHeadBox text={`FAQ's`} />
+        <SubHeadBox text={`Have questions?`} />
         <FAQ />
       </div>
 

@@ -1,45 +1,67 @@
 "use client";
 import SubHeadBox from "@/components/Layout/SubHeadBox";
 import { cn } from "@/lib/utils";
-import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  Mic,
+  BookOpenCheck,
+  PhoneIncoming,
+  History,
+  Siren,
+  Mail,
+  KeyRound,
+  ShieldCheck,
+  ChevronsDownUp,
+  ChevronsUpDown,
+} from "lucide-react";
+import LogoBox from "@/components/shared/LogoBox";
 
 const FAQ = () => {
   const [open, setOpen] = React.useState([]);
+  const IconStyles = "size-5 text-accent-color";
+
   const FAQS = [
     {
       question: "Will the AI sound robotic?",
       ans: "No. You choose the voice, and it's designed to handle natural back-and-forth conversation, including interruptions.",
+      icon: <Mic className={IconStyles} />,
     },
     {
       question: "Can it answer questions specific to our firm?",
       ans: "Yes — it's trained on a knowledge base built entirely from the information you provide.",
+      icon: <BookOpenCheck className={IconStyles} />,
     },
     {
       question: "Does it screen out spam calls?",
-      ans: " No — every incoming call is answered, so genuine prospects calling after hours or from unfamiliar numbers are never accidentally missed.",
+      ans: "No — every incoming call is answered, so genuine prospects calling after hours or from unfamiliar numbers are never accidentally missed.",
+      icon: <PhoneIncoming className={IconStyles} />,
     },
     {
       question: "Does it remember a caller from a previous call?",
       ans: "Each call is handled based on the information shared during that conversation.",
+      icon: <History className={IconStyles} />,
     },
     {
       question: "What happens with real emergencies?",
       ans: "Emergency calls are detected and routed immediately — never left waiting.",
+      icon: <Siren className={IconStyles} />,
     },
     {
       question: "Does it call leads back automatically?",
       ans: "Follow-up currently happens through automated email, not outbound calling.",
+      icon: <Mail className={IconStyles} />,
     },
     {
       question: "Who owns the system once it's built?",
       ans: "Your firm does — 100%, with no vendor lock-in.",
+      icon: <KeyRound className={IconStyles} />,
     },
     {
       question: "Is our client information kept confidential?",
       ans: "The system is configured around your firm's approved workflows, and ownership of all data collected stays with your firm.",
+      icon: <ShieldCheck className={IconStyles} />,
     },
   ];
   return (
@@ -56,53 +78,40 @@ const FAQ = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="w-full h-fit flex justify-center items-start flex-wrap"
+        className="w-full h-fit gap4 flex justify-center items-start flex-wrap"
       >
         {FAQS.map((item, idx) => (
           <div
             key={idx}
             className={cn(
-              "h-fit md:w-[50%] w-full flex flex-col justify-start items-start border-y border-line border-r border-t-background",
+              "h-45 md:w-[50%] w-full flex flex-col justify-start items-start border-y border-line border-r border-t-background px-4 py-6 gap-4 ",
               idx % 2 === 1 && "border-r-0",
             )}
           >
             <div
               key={idx}
-              onClick={() => {
-                if (open.includes(idx)) {
-                  setOpen(open.filter((i) => i !== idx));
-                } else {
-                  setOpen([...open, idx]);
-                }
-              }}
               className={cn(
-                "h-fit w-full flex justify-between items-center gap-4 p-4 cursor-pointer bg-background hover:bg-black/3 dark:hover:bg-white/5 group transition-all duration-300 ease-in-out",
+                "h-fit w-full flex justify-start items-center bg-background group transition-all duration-300 ease-in-out",
               )}
             >
-              <p className="text-[15px] text-primary-text ">
+              <LogoBox>{item.icon}</LogoBox>
+
+              <p className="text-[16px] text-primary-text font-medium">
                 {item.question || "Some text here"}
               </p>
-
-              {open.includes(idx) ? (
-                <ChevronsDownUp size={16} className="text-secondary-text" />
-              ) : (
-                <ChevronsUpDown size={16} className="text-secondary-text" />
-              )}
             </div>
 
-            {open.includes(idx) && (
-              <div className="flex justify-start items-start p-4">
-                <span className="text-[14px] text-primary-text font-medium">
-                  {item.ans}{" "}
-                </span>
-              </div>
-            )}
+            <div className="flex justify-start items-start">
+              <span className="text-[16px] text-secondary-text">
+                {item.ans}{" "}
+              </span>
+            </div>
           </div>
         ))}
 
         <div
           className={cn(
-            "w-full h-12 flex gap-1 justify-center items-center border-b border-line",
+            "w-full h-12 flex gap-1 justify-center items-center border-y border-line",
             open.includes(5) || (open.includes(7) && "border-t"),
           )}
         >
