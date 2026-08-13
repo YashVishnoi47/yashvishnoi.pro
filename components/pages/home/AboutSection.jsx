@@ -1,11 +1,8 @@
 "use client";
-import SubHeadBox from "@/components/Layout/SubHeadBox";
-import Link from "next/link";
 import React from "react";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import LegalIntakeOSicon from "@/assets/svg/LegalIntakeOSicon";
 
 const AboutSection = () => {
   const socials = [

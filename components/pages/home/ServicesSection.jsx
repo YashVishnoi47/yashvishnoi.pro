@@ -89,7 +89,7 @@ const ServicesSection = () => {
         {services.map((item, idx) => (
           <div
             className={cn(
-              "h-40 py-4 md:w-1/2 w-full border border-line p-4 flex flex-col gap-4 hover:bg-line/10 transition-all duration-200 ease-in-out",
+              "h-45 py-4 md:w-1/2 w-full border border-line p-4 flex flex-col gap-4 hover:bg-line/10 transition-all duration-200 ease-in-out",
               idx % 2 === 1 ? "border-r-0 border-l-0" : "border-l-0",
               idx === 8 && "border-b-0",
               idx === 9 && "border-b-0",
