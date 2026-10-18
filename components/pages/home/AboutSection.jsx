@@ -39,7 +39,13 @@ const AboutSection = () => {
         }}
       >
         <div className="w-70 aspect-square rounded-[8px] overflow-hidden md:flex hidden">
-          <Image className="object-cover w-full h-full" src="/yash-vishnoi.jpeg" width={1000} height={1000} />
+          <Image
+            className="object-cover w-full h-full"
+            alt="Yash-Photo"
+            src="/yash-vishnoi.jpeg"
+            width={1000}
+            height={1000}
+          />
         </div>
 
         <div className={"w-full flex flex-col gap-4"}>

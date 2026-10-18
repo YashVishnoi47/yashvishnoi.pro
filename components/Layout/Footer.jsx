@@ -160,7 +160,7 @@ const Footer = () => {
             <Link
               target="_blank"
               className="hover:text-primary-text font-medium underline underline-offset-2"
-              href={"https://yashvishnoi.pro/"}
+              href={"https://yashvishnoi.site/"}
             >
               Yash Vishnoi
             </Link>

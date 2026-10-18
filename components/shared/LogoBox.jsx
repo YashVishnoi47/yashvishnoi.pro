@@ -3,13 +3,7 @@ import React from "react";
 
 const LogoBox = ({ children, className }) => {
   return (
-    <div
-      className={cn(
-        "relative flex aspect-square size-10 items-center justify-center rounded-md bg-accent-color/10 dark:bg-white/10 mr-4 text-accent-color dark:text-neutral-200",
-        className,
-        "transition-all duration-200 ease-in-out",
-      )}
-    >
+    <div class="relative flex aspect-square size-8 items-center justify-center rounded-sm bg-linear-to-b from-blue-400 to-blue-600 align-middle shadow-lg ring-1 ring-white/20 ring-offset-2 ring-offset-blue-500 ring-inset">
       {children}
     </div>
   );

@@ -13,8 +13,6 @@ import {
   Mail,
   KeyRound,
   ShieldCheck,
-  ChevronsDownUp,
-  ChevronsUpDown,
 } from "lucide-react";
 import LogoBox from "@/components/shared/LogoBox";
 
@@ -111,11 +109,11 @@ const FAQ = () => {
 
         <div
           className={cn(
-            "w-full h-12 flex gap-1 justify-center items-center border-y border-line",
+            "w-full h-12 flex gap-1 justify-center items-center border-y border-line text-sec-text",
             open.includes(5) || (open.includes(7) && "border-t"),
           )}
         >
-          <span className="text-[14px] text-secondary-text">
+          <span className="text-[14px]">
             Can't find the answer you're looking for?
           </span>{" "}
           <Link
